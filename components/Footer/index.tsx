@@ -49,15 +49,11 @@ export default function Footer() {
     <Box
       borderTopWidth={0.25}
       borderStyle={"solid"}
-      borderColor={useColorModeValue("purple.200", "")}
+      borderColor={useColorModeValue("black", "#4B7BE5")}
       bg={BodyBgColor}
       color={useColorModeValue("gray.700", "gray.200")}
     >
-      <Box
-        borderTopWidth={2}
-        borderStyle={"solid"}
-        borderColor={useColorModeValue("purple.100", "")}
-      >
+      <Box>
         <Container
           as={Stack}
           maxW={"6xl"}
@@ -68,16 +64,20 @@ export default function Footer() {
           align={{ base: "center", md: "center" }}
         >
           <Text
-            fontSize="lg"
+            fontSize={{ base: "xs", md: "sm", lg: "md" }}
             textTransform="uppercase"
             fontWeight="normal"
             as="kbd"
             letterSpacing={2}
-            color={useColorModeValue("purple.600", "white")}
+            color="black"
           >
             © 2022 Made with ❤ by Sabelo
           </Text>
-          <Stack direction={"row"} spacing={6}>
+          <Stack
+            direction={"row"}
+            spacing={6}
+            color={useColorModeValue("#14C38E", "#4B7BE5")}
+          >
             <SocialButton
               label={"Twitter"}
               href={"https://twitter.com/SabeloMkhwanaz"}
@@ -90,7 +90,10 @@ export default function Footer() {
             >
               <FaGithub />
             </SocialButton>
-            <SocialButton label={"LinkedIn"} href={""}>
+            <SocialButton
+              label={"LinkedIn"}
+              href={"https://www.linkedin.com/in/sabelo-mkhwanazi-54ba431b1/"}
+            >
               <FaLinkedinIn />
             </SocialButton>
           </Stack>

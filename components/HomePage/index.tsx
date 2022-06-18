@@ -15,7 +15,7 @@ import NextLink from "next/link";
 export default function HomePage() {
   const BodyBgColor = useColorModeValue("#FFF8D5", "gray.600");
   const SubHeaderTextColor = useColorModeValue("gray.600", "white");
-  const SubHeaderTextColor2 = useColorModeValue("#14C38E", "white");
+  const SubHeaderTextColor2 = useColorModeValue("#14C38E", "#4B7BE5");
   const ButtonColorMode = useColorModeValue("#4B7BE5", "#4B7BE5");
   const ButtonColorMode2 = useColorModeValue("#14C38E", "#14C38E");
   const ButtonTextColor = useColorModeValue("white", "black");
@@ -23,9 +23,9 @@ export default function HomePage() {
 
   return (
     <Stack
+      minH="86.8vh"
       pt={5}
       bg={BodyBgColor}
-      minH={"100vh"}
       direction={{ base: "column", md: "row" }}
     >
       <Flex p={8} flex={1} align={"center"} justify={"center"}>
@@ -58,7 +58,7 @@ export default function HomePage() {
             fontSize={{ base: "md", lg: "2xl" }}
             color={SubHeaderTextColor}
           >
-            A Software Developer, Blockchain Enthusiast thanks for passing to
+            A Software Developer, Blockchain Enthusiast thanks for passing by to
             explore what I`ve been Busy with!
           </Text>
           <Stack direction={{ base: "column", md: "row" }} spacing={4}>
@@ -117,9 +117,8 @@ export default function HomePage() {
       </Flex>
       <Flex flex={1}>
         <Image
-          width="770px"
-          height="770px"
-          objectFit="cover"
+          width={{ base: "400px", md: "500px", lg: "700px" }}
+          height={{ base: "400px", md: "500px", lg: "700px" }}
           src="/Sabelologo.png"
           alt="Sabelologo"
         />

@@ -53,7 +53,8 @@ export default function Navbar() {
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <IconButton
             size={"md"}
-            color="purple.600"
+            bgColor="#F8ECD1"
+            color="black"
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
             aria-label={"Open Menu"}
             display={{ md: "none" }}
@@ -229,6 +230,7 @@ export default function Navbar() {
         {isOpen ? (
           <Box pb={4} display={{ md: "none" }}>
             <Stack as={"nav"} spacing={4}>
+              <ColorModeSwitcher variant="ghost" size="sm" mr={4} />
               <NextLink href="/" passHref>
                 <CharkaLink
                   px={2}
@@ -237,7 +239,7 @@ export default function Navbar() {
                   textTransform="uppercase"
                   fontWeight="semibold"
                   letterSpacing={2}
-                  color="purple.600"
+                  color="black"
                   rounded="md"
                   _hover={{
                     textDecoration: "none",
@@ -255,7 +257,7 @@ export default function Navbar() {
                   textTransform="uppercase"
                   fontWeight="semibold"
                   letterSpacing={2}
-                  color="purple.600"
+                  color="black"
                   rounded="md"
                   _hover={{
                     textDecoration: "none",
@@ -273,7 +275,7 @@ export default function Navbar() {
                   textTransform="uppercase"
                   fontWeight="semibold"
                   letterSpacing={2}
-                  color="purple.600"
+                  color="black"
                   rounded="md"
                   _hover={{
                     textDecoration: "none",
@@ -291,7 +293,7 @@ export default function Navbar() {
                   textTransform="uppercase"
                   fontWeight="semibold"
                   letterSpacing={3}
-                  color="purple.600"
+                  color="black"
                   rounded="md"
                   _hover={{
                     textDecoration: "none",
@@ -309,7 +311,7 @@ export default function Navbar() {
                   textTransform="uppercase"
                   fontWeight="semibold"
                   letterSpacing={3}
-                  color="purple.600"
+                  color="black"
                   rounded="md"
                   _hover={{
                     textDecoration: "none",
@@ -327,7 +329,7 @@ export default function Navbar() {
                   textTransform="uppercase"
                   fontWeight="semibold"
                   letterSpacing={3}
-                  color="purple.600"
+                  color="black"
                   rounded="md"
                   _hover={{
                     textDecoration: "none",
@@ -345,7 +347,7 @@ export default function Navbar() {
                   textTransform="uppercase"
                   fontWeight="semibold"
                   letterSpacing={3}
-                  color="purple.600"
+                  color="black"
                   rounded="md"
                   _hover={{
                     textDecoration: "none",
