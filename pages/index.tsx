@@ -1,7 +1,7 @@
 import { Box } from "@chakra-ui/react";
 import type { NextPage } from "next";
 import Head from "next/head";
-import { Footer, Navbar } from "../components";
+import { Footer, HomePage, Navbar } from "../components";
 
 const Home: NextPage = () => {
   return (
@@ -14,6 +14,7 @@ const Home: NextPage = () => {
 
       <Box>
         <Navbar />
+        <HomePage />
         <Footer />
       </Box>
     </>

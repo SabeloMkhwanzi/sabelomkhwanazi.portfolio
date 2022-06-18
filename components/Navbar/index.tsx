@@ -3,11 +3,11 @@ import {
   Box,
   Flex,
   HStack,
-  Link,
   useDisclosure,
   Stack,
   Text,
   Image,
+  Link as CharkaLink,
 } from "@chakra-ui/react";
 
 import {
@@ -17,9 +17,9 @@ import {
   IconButtonProps,
 } from "@chakra-ui/react";
 import { FaMoon, FaSun } from "react-icons/fa";
-import { GiTicket } from "react-icons/gi";
-
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+
+import NextLink from "next/link";
 
 type ColorModeSwitcherProps = Omit<IconButtonProps, "aria-label">;
 
@@ -59,13 +59,13 @@ export default function Navbar() {
             display={{ md: "none" }}
             onClick={isOpen ? onClose : onOpen}
           />
-          <HStack spacing={8} alignItems={"center"}>
+          <HStack spacing={8} alignItems={"center"} mx="auto">
             <Stack direction="row">
               <Image
-                width={10}
-                height={10}
+                width="3rem"
+                height="3rem"
                 src="/Sabelologo.png"
-                alt="Sabelologo logo"
+                alt="Sabelologo"
               />
               <Text fontFamily="mono" fontSize="3xl" fontWeight="bold">
                 Sabelo
@@ -78,180 +78,283 @@ export default function Navbar() {
               display={{ base: "none", md: "flex" }}
             >
               <Stack
-                direction={"row"}
+                direction="row"
                 spacing={12}
-                justify={"center"}
-                align={"center"}
+                justifyContent="center"
+                ml="20"
               >
-                <Link
-                  py={3}
-                  fontSize="md"
-                  textTransform="uppercase"
-                  fontWeight="normal"
-                  letterSpacing={2}
-                  _hover={{
-                    textDecorationColor: "red.300",
-                  }}
-                  href={"/"}
-                >
-                  Home
-                </Link>
-                <Link
-                  py={3}
-                  fontSize="md"
-                  textTransform="uppercase"
-                  fontWeight="normal"
-                  letterSpacing={1}
-                  href={"sell"}
-                >
-                  About
-                </Link>
-                <Link
-                  py={3}
-                  fontSize="md"
-                  textTransform="uppercase"
-                  fontWeight="normal"
-                  letterSpacing={2}
-                  href={"collection"}
-                >
-                  Blog
-                </Link>
-                <Link
-                  py={3}
-                  fontSize="md"
-                  textTransform="uppercase"
-                  fontWeight="normal"
-                  letterSpacing={2}
-                  href={"myassets"}
-                >
-                  Projects
-                </Link>
-                <Link
-                  py={3}
-                  fontSize="md"
-                  textTransform="uppercase"
-                  fontWeight="normal"
-                  letterSpacing={2}
-                  href={"myassets"}
-                >
-                  Github
-                </Link>
-                <Link
-                  py={3}
-                  fontSize="md"
-                  textTransform="uppercase"
-                  fontWeight="normal"
-                  letterSpacing={2}
-                  href={"myassets"}
-                >
-                  YouTube
-                </Link>
-                <Link
-                  py={3}
-                  fontSize="md"
-                  textTransform="uppercase"
-                  fontWeight="normal"
-                  letterSpacing={2}
-                  href={"myassets"}
-                >
-                  Connect
-                </Link>
+                <NextLink href="/" passHref>
+                  <CharkaLink
+                    as="button"
+                    fontSize="md"
+                    textTransform="uppercase"
+                    fontWeight="semibold"
+                    letterSpacing={2}
+                    px={1}
+                    py={1}
+                    rounded="md"
+                    _hover={{
+                      textDecoration: "none",
+                      bg: useColorModeValue("#6FDFDF", "gray.800"),
+                    }}
+                  >
+                    Home
+                  </CharkaLink>
+                </NextLink>
+                <NextLink href="about" passHref>
+                  <CharkaLink
+                    as="button"
+                    fontSize="md"
+                    textTransform="uppercase"
+                    fontWeight="semibold"
+                    letterSpacing={1}
+                    px={1}
+                    py={1}
+                    rounded="md"
+                    _hover={{
+                      textDecoration: "none",
+                      bg: useColorModeValue("#6FDFDF", "gray.800"),
+                    }}
+                  >
+                    About
+                  </CharkaLink>
+                </NextLink>
+
+                <NextLink href="blog" passHref>
+                  <CharkaLink
+                    as="button"
+                    fontSize="md"
+                    textTransform="uppercase"
+                    fontWeight="semibold"
+                    letterSpacing={2}
+                    px={1}
+                    py={1}
+                    rounded="md"
+                    _hover={{
+                      textDecoration: "none",
+                      bg: useColorModeValue("#6FDFDF", "gray.800"),
+                    }}
+                  >
+                    Blog
+                  </CharkaLink>
+                </NextLink>
+
+                <NextLink href="projects" passHref>
+                  <CharkaLink
+                    as="button"
+                    fontSize="md"
+                    textTransform="uppercase"
+                    fontWeight="semibold"
+                    letterSpacing={2}
+                    px={1}
+                    py={1}
+                    rounded="md"
+                    _hover={{
+                      textDecoration: "none",
+                      bg: useColorModeValue("#6FDFDF", "gray.800"),
+                    }}
+                  >
+                    Projects
+                  </CharkaLink>
+                </NextLink>
+
+                <NextLink href="github" passHref>
+                  <CharkaLink
+                    as="button"
+                    fontSize="md"
+                    textTransform="uppercase"
+                    fontWeight="semibold"
+                    letterSpacing={2}
+                    px={1}
+                    py={1}
+                    rounded="md"
+                    _hover={{
+                      textDecoration: "none",
+                      bg: useColorModeValue("#6FDFDF", "gray.800"),
+                    }}
+                  >
+                    Github
+                  </CharkaLink>
+                </NextLink>
+
+                <NextLink href="youtube" passHref>
+                  <CharkaLink
+                    as="button"
+                    fontSize="md"
+                    textTransform="uppercase"
+                    fontWeight="semibold"
+                    letterSpacing={2}
+                    px={1}
+                    py={1}
+                    rounded="md"
+                    _hover={{
+                      textDecoration: "none",
+                      bg: useColorModeValue("#6FDFDF", "gray.800"),
+                    }}
+                  >
+                    YouTube
+                  </CharkaLink>
+                </NextLink>
+                <NextLink href="connect" passHref>
+                  <CharkaLink
+                    as="button"
+                    fontSize="md"
+                    textTransform="uppercase"
+                    fontWeight="semibold"
+                    letterSpacing={2}
+                    px={1}
+                    py={1}
+                    rounded="md"
+                    _hover={{
+                      textDecoration: "none",
+                      bg: useColorModeValue("#6FDFDF", "gray.800"),
+                    }}
+                  >
+                    Connect
+                  </CharkaLink>
+                </NextLink>
+
+                <Flex alignItems={"center"} py={3}>
+                  <ColorModeSwitcher variant="ghost" size="sm" mr={4} />
+                </Flex>
               </Stack>
             </HStack>
           </HStack>
 
-          <Flex alignItems={"center"}>
+          {/* <Flex alignItems={"center"}>
             <ColorModeSwitcher variant="ghost" size="sm" mr={4} />
-          </Flex>
+          </Flex> */}
         </Flex>
 
         {isOpen ? (
           <Box pb={4} display={{ md: "none" }}>
             <Stack as={"nav"} spacing={4}>
-              <Link
-                px={2}
-                py={1}
-                fontSize="md"
-                textTransform="uppercase"
-                fontWeight="normal"
-                letterSpacing={2}
-                color="purple.600"
-                href="/"
-              >
-                Home
-              </Link>
-              <Link
-                px={2}
-                py={1}
-                fontSize="md"
-                textTransform="uppercase"
-                fontWeight="normal"
-                letterSpacing={2}
-                color="purple.600"
-                href={"sell"}
-              >
-                About
-              </Link>
-              <Link
-                px={2}
-                py={1}
-                fontSize="md"
-                textTransform="uppercase"
-                fontWeight="normal"
-                letterSpacing={2}
-                color="purple.600"
-                href={"collection"}
-              >
-                Blog
-              </Link>
-              <Link
-                px={2}
-                py={1}
-                fontSize="md"
-                textTransform="uppercase"
-                fontWeight="normal"
-                letterSpacing={3}
-                color="purple.600"
-                href={"myassets"}
-              >
-                Projects
-              </Link>
-              <Link
-                px={2}
-                py={1}
-                fontSize="md"
-                textTransform="uppercase"
-                fontWeight="normal"
-                letterSpacing={3}
-                color="purple.600"
-                href={"myassets"}
-              >
-                Github
-              </Link>
-              <Link
-                px={2}
-                py={1}
-                fontSize="md"
-                textTransform="uppercase"
-                fontWeight="normal"
-                letterSpacing={3}
-                color="purple.600"
-                href={"myassets"}
-              >
-                YouTube
-              </Link>
-              <Link
-                px={2}
-                py={1}
-                fontSize="md"
-                textTransform="uppercase"
-                fontWeight="normal"
-                letterSpacing={3}
-                color="purple.600"
-                href={"myassets"}
-              >
-                Connect
-              </Link>
+              <NextLink href="/" passHref>
+                <CharkaLink
+                  px={2}
+                  py={1}
+                  fontSize="md"
+                  textTransform="uppercase"
+                  fontWeight="semibold"
+                  letterSpacing={2}
+                  color="purple.600"
+                  rounded="md"
+                  _hover={{
+                    textDecoration: "none",
+                    bg: "NavButtonBg",
+                  }}
+                >
+                  Home
+                </CharkaLink>
+              </NextLink>
+              <NextLink href="about" passHref>
+                <CharkaLink
+                  px={2}
+                  py={1}
+                  fontSize="md"
+                  textTransform="uppercase"
+                  fontWeight="semibold"
+                  letterSpacing={2}
+                  color="purple.600"
+                  rounded="md"
+                  _hover={{
+                    textDecoration: "none",
+                    bg: "NavButtonBg",
+                  }}
+                >
+                  About
+                </CharkaLink>
+              </NextLink>
+              <NextLink href="blog" passHref>
+                <CharkaLink
+                  px={2}
+                  py={1}
+                  fontSize="md"
+                  textTransform="uppercase"
+                  fontWeight="semibold"
+                  letterSpacing={2}
+                  color="purple.600"
+                  rounded="md"
+                  _hover={{
+                    textDecoration: "none",
+                    bg: "NavButtonBg",
+                  }}
+                >
+                  Blog
+                </CharkaLink>
+              </NextLink>
+              <NextLink href="projects" passHref>
+                <CharkaLink
+                  px={2}
+                  py={1}
+                  fontSize="md"
+                  textTransform="uppercase"
+                  fontWeight="semibold"
+                  letterSpacing={3}
+                  color="purple.600"
+                  rounded="md"
+                  _hover={{
+                    textDecoration: "none",
+                    bg: "NavButtonBg",
+                  }}
+                >
+                  Projects
+                </CharkaLink>
+              </NextLink>
+              <NextLink href="github" passHref>
+                <CharkaLink
+                  px={2}
+                  py={1}
+                  fontSize="md"
+                  textTransform="uppercase"
+                  fontWeight="semibold"
+                  letterSpacing={3}
+                  color="purple.600"
+                  rounded="md"
+                  _hover={{
+                    textDecoration: "none",
+                    bg: "NavButtonBg",
+                  }}
+                >
+                  Github
+                </CharkaLink>
+              </NextLink>
+              <NextLink href="youtube" passHref>
+                <CharkaLink
+                  px={2}
+                  py={1}
+                  fontSize="md"
+                  textTransform="uppercase"
+                  fontWeight="semibold"
+                  letterSpacing={3}
+                  color="purple.600"
+                  rounded="md"
+                  _hover={{
+                    textDecoration: "none",
+                    bg: "NavButtonBg",
+                  }}
+                >
+                  YouTube
+                </CharkaLink>
+              </NextLink>
+              <NextLink href="connect" passHref>
+                <CharkaLink
+                  px={2}
+                  py={1}
+                  fontSize="md"
+                  textTransform="uppercase"
+                  fontWeight="semibold"
+                  letterSpacing={3}
+                  color="purple.600"
+                  rounded="md"
+                  _hover={{
+                    textDecoration: "none",
+                    bg: "NavButtonBg",
+                  }}
+                >
+                  Connect
+                </CharkaLink>
+              </NextLink>
             </Stack>
           </Box>
         ) : null}
