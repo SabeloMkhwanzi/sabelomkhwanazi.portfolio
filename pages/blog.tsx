@@ -3,11 +3,11 @@ import Head from "next/head";
 import React from "react";
 import { Footer, Navbar } from "../components";
 
-function github() {
+export default function Blog() {
   return (
     <>
       <Head>
-        <title>Sabelo Mkhwanazi - Github </title>
+        <title>Sabelo Mkhwanazi - Blog </title>
         <meta name="description" content="Sabelo Personal portfolio site" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -18,5 +18,3 @@ function github() {
     </>
   );
 }
-
-export default github;

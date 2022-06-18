@@ -1,9 +1,22 @@
-import React from 'react'
+import { Box } from "@chakra-ui/react";
+import Head from "next/head";
+import React from "react";
+import { Footer, Navbar } from "../components";
 
 function youtube() {
   return (
-    <div>youtube</div>
-  )
+    <>
+      <Head>
+        <title>Sabelo Mkhwanazi - About </title>
+        <meta name="description" content="Sabelo Personal portfolio site" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <Box>
+        <Navbar />
+        <Footer />
+      </Box>
+    </>
+  );
 }
 
-export default youtube
+export default youtube;
