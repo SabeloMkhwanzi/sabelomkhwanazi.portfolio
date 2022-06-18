@@ -7,6 +7,7 @@ import {
   useDisclosure,
   Stack,
   Text,
+  Image,
 } from "@chakra-ui/react";
 
 import {
@@ -59,7 +60,13 @@ export default function Navbar() {
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={"center"}>
-            <Stack direction="row-reverse">
+            <Stack direction="row">
+              <Image
+                width={10}
+                height={10}
+                src="/Sabelologo.png"
+                alt="Sabelologo logo"
+              />
               <Text fontFamily="mono" fontSize="3xl" fontWeight="bold">
                 Sabelo
               </Text>
