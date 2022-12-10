@@ -20,3 +20,12 @@ function projects() {
 }
 
 export default projects;
+
+<p align="center">
+  <a href="https://linktr.ee/sambitsargam">
+  <img src="https://raw.githubusercontent.com/SAMBITSARGAM/sambitsargam.github.io/main/sambitsargam.png" alt="👋 Hi there! I'm Sambit Sargam Ekalabya" title="👋 Hi there! I'm Sambit"/>
+  </a>
+</p>
+
+
+
