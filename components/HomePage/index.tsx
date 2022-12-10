@@ -1,128 +1,116 @@
 import {
-  Button,
-  Flex,
-  Heading,
-  Image,
-  Stack,
+  createStyles,
+  Container,
   Text,
-  Link,
-  useColorModeValue,
-  Link as CharkaLink,
-} from "@chakra-ui/react";
+  Button,
+  Group,
+  Code,
+} from "@mantine/core";
 
-import NextLink from "next/link";
+const BREAKPOINT = "@media (max-width: 755px)";
+
+const useStyles = createStyles((theme) => ({
+  wrapper: {
+    position: "relative",
+    boxSizing: "border-box",
+    backgroundColor: "#0A1A2F",
+  },
+
+  inner: {
+    position: "relative",
+    paddingTop: 50,
+    paddingBottom: 321,
+
+    [BREAKPOINT]: {
+      paddingBottom: 80,
+      paddingTop: 80,
+    },
+  },
+
+  title: {
+    fontFamily: `Greycliff CF, ${theme.fontFamily}`,
+    fontSize: 62,
+    fontWeight: 900,
+    lineHeight: 1.1,
+    margin: 0,
+    padding: 0,
+    color: "#8892B0",
+
+    [BREAKPOINT]: {
+      fontSize: 42,
+      lineHeight: 1.2,
+    },
+  },
+
+  description: {
+    marginTop: theme.spacing.xl,
+    fontSize: 24,
+
+    [BREAKPOINT]: {
+      fontSize: 18,
+    },
+  },
+
+  controls: {
+    marginTop: theme.spacing.xl * 2,
+
+    [BREAKPOINT]: {
+      marginTop: theme.spacing.xl,
+    },
+  },
+
+  control: {
+    height: 54,
+    paddingLeft: 38,
+    paddingRight: 38,
+
+    [BREAKPOINT]: {
+      height: 54,
+      paddingLeft: 18,
+      paddingRight: 18,
+      flex: 1,
+    },
+  },
+
+  text: {
+    display: "flex",
+    alignItems: "center",
+    paddingLeft: theme.spacing.md,
+    paddingRight: theme.spacing.md,
+    textDecoration: "none",
+    fontWeight: 700,
+    fontSize: theme.fontSizes.lg,
+    color: theme.colors.blue[9],
+  },
+}));
 
 export default function HomePage() {
-  const BodyBgColor = useColorModeValue("#FFF8D5", "gray.600");
-  const SubHeaderTextColor = useColorModeValue("gray.600", "white");
-  const SubHeaderTextColor2 = useColorModeValue("#14C38E", "#4B7BE5");
-  const ButtonColorMode = useColorModeValue("#4B7BE5", "#4B7BE5");
-  const ButtonColorMode2 = useColorModeValue("#14C38E", "#14C38E");
-  const ButtonTextColor = useColorModeValue("white", "black");
-  const HeaderTextColor = useColorModeValue("#733C3C", "#B4ECE3");
+  const { classes } = useStyles();
 
   return (
-    <Stack
-      minH="86.8vh"
-      pt={5}
-      bg={BodyBgColor}
-      direction={{ base: "column", md: "row" }}
-    >
-      <Flex p={8} flex={1} align={"center"} justify={"center"}>
-        <Stack spacing={6} w={"full"} maxW={"lg"}>
-          <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>
-            <Text
-              fontFamily="cursive"
-              as={"span"}
-              position={"relative"}
-              _after={{
-                content: "''",
-                width: "full",
-                height: { base: "20%", md: "30%" },
-                position: "absolute",
-                bottom: 1,
-                left: 0,
-                bg: "purple.400",
-                zIndex: -1,
-              }}
-            >
-              Hello There, I`m
-            </Text>
-            <br />
-            <Text fontFamily="cursive" color={SubHeaderTextColor2} as={"span"}>
-              Sabelo Mkhwanazi
-            </Text>{" "}
-          </Heading>
-          <Text
-            fontFamily="monospace"
-            fontSize={{ base: "md", lg: "2xl" }}
-            color={SubHeaderTextColor}
-          >
-            A Software Developer, Blockchain Enthusiast thanks for passing by to
-            explore what I`ve been Busy with!
+    <div className={classes.wrapper}>
+      <Container size={900} className={classes.inner} bg="bgColor">
+        <Text px={7} color="gray.5" className={classes.text}>
+          Hi, my name is
+        </Text>
+        <h1 className={classes.title}>
+          <Text component="span" color="#CCD6F6" inherit>
+            Sabelo Mkhwanazi
           </Text>
-          <Stack direction={{ base: "column", md: "row" }} spacing={4}>
-            <Button
-              textColor={ButtonTextColor}
-              borderRadius="lg"
-              bgColor={ButtonColorMode}
-              shadow="lg"
-              fontSize="m"
-              textTransform="uppercase"
-              fontWeight="normal"
-              as="kbd"
-              letterSpacing={2}
-              _hover={{
-                textDecoration: "none",
-                bg: useColorModeValue("#6FDFDF", "#6FDFDF"),
-              }}
-            >
-              <NextLink href="about" passHref>
-                <CharkaLink
-                  _hover={{
-                    textDecoration: "none",
-                  }}
-                >
-                  About Me
-                </CharkaLink>
-              </NextLink>
-            </Button>
-            <Button
-              textColor={ButtonTextColor}
-              borderRadius="lg"
-              bgColor={ButtonColorMode2}
-              shadow="lg"
-              fontSize="m"
-              textTransform="uppercase"
-              fontWeight="normal"
-              as="kbd"
-              letterSpacing={2}
-              _hover={{
-                textDecoration: "none",
-                bg: useColorModeValue("#B8F1B0", "#B8F1B0"),
-              }}
-            >
-              <NextLink href="about" passHref>
-                <CharkaLink
-                  _hover={{
-                    textDecoration: "none",
-                  }}
-                >
-                  Projects
-                </CharkaLink>
-              </NextLink>
-            </Button>
-          </Stack>
-        </Stack>
-      </Flex>
-      <Flex flex={1}>
-        <Image
-          width={{ base: "400px", md: "500px", lg: "700px" }}
-          height={{ base: "400px", md: "500px", lg: "700px" }}
-          src="/Sabelologo.png"
-          alt="Sabelologo"
-        />
-      </Flex>
-    </Stack>
+          <br />I build with code...
+        </h1>
+
+        <Text className={classes.description} color="#8892B0">
+          I’m a software developer specializing in building, blockchain
+          Enthusiast hacking and building dapps that promotes decentralization.
+        </Text>
+
+        <Group className={classes.controls}>
+          <Button size="xl" variant="outline" color="#364FC7" radius="lg">
+            CheckMy Build
+          </Button>
+        </Group>
+      </Container>
+    </div>
   );
 }

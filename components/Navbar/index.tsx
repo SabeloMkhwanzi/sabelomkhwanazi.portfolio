@@ -1,366 +1,189 @@
-import React from "react";
+import { Code } from "@chakra-ui/react";
 import {
-  Box,
-  Flex,
-  HStack,
-  useDisclosure,
-  Stack,
+  createStyles,
+  Header,
+  HoverCard,
+  Group,
+  Button,
+  UnstyledButton,
   Text,
-  Image,
-  Link as CharkaLink,
-} from "@chakra-ui/react";
+  SimpleGrid,
+  ThemeIcon,
+  Anchor,
+  Divider,
+  Center,
+  Box,
+  Burger,
+  Drawer,
+  Collapse,
+  ScrollArea,
+} from "@mantine/core";
+import { useDisclosure, useHover } from "@mantine/hooks";
+import { IconHexagonLetterS } from "@tabler/icons";
 
-import {
-  useColorMode,
-  useColorModeValue,
-  IconButton,
-  IconButtonProps,
-} from "@chakra-ui/react";
-import { FaMoon, FaSun } from "react-icons/fa";
-import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+const useStyles = createStyles((theme) => ({
+  link: {
+    display: "flex",
+    alignItems: "center",
+    paddingLeft: theme.spacing.md,
+    paddingRight: theme.spacing.md,
+    textDecoration: "none",
+    fontWeight: 700,
+    fontSize: theme.fontSizes.md,
 
-import NextLink from "next/link";
+    "&:hover": {
+      color: theme.colors.blue[9],
+    },
+  },
 
-type ColorModeSwitcherProps = Omit<IconButtonProps, "aria-label">;
+  dropdownFooter: {
+    backgroundColor:
+      theme.colorScheme === "dark"
+        ? theme.colors.dark[7]
+        : theme.colors.gray[0],
+    margin: -theme.spacing.md,
+    marginTop: theme.spacing.sm,
+    padding: `${theme.spacing.md}px ${theme.spacing.md * 2}px`,
+    paddingBottom: theme.spacing.xl,
+    borderTop: `1px solid ${
+      theme.colorScheme === "dark" ? theme.colors.dark[5] : theme.colors.gray[1]
+    }`,
+  },
 
-export const ColorModeSwitcher = (props: ColorModeSwitcherProps) => {
-  const { toggleColorMode } = useColorMode();
-  const text = useColorModeValue("dark", "light");
-  const SwitchIcon = useColorModeValue(FaMoon, FaSun);
+  hiddenMobile: {
+    [theme.fn.smallerThan("sm")]: {
+      display: "none",
+    },
+  },
 
-  return (
-    <IconButton
-      size="md"
-      fontSize="lg"
-      variant="ghost"
-      color="current"
-      marginLeft="2"
-      onClick={toggleColorMode}
-      icon={<SwitchIcon />}
-      aria-label={`Switch to ${text} mode`}
-      {...props}
-    />
-  );
-};
+  hiddenDesktop: {
+    [theme.fn.largerThan("sm")]: {
+      display: "none",
+    },
+  },
+}));
 
 export default function Navbar() {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const BodyBgColor = useColorModeValue("#FFF8D5", "gray.600");
+  const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] =
+    useDisclosure(false);
+  const [linksOpened, { toggle: toggleLinks }] = useDisclosure(false);
+  const { classes, theme } = useStyles();
+  const { hovered, ref } = useHover();
 
   return (
-    <>
-      <Box bg={BodyBgColor} px={4}>
-        <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
-          <IconButton
-            size={"md"}
-            bgColor="#F8ECD1"
-            color="black"
-            icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-            aria-label={"Open Menu"}
-            display={{ md: "none" }}
-            onClick={isOpen ? onClose : onOpen}
-          />
-          <HStack spacing={8} alignItems={"center"} mx="auto">
-            <Stack direction="row">
-              <Image
-                width="3rem"
-                height="3rem"
-                src="/Sabelologo.png"
-                alt="Sabelologo"
-              />
-              <Text fontFamily="mono" fontSize="3xl" fontWeight="bold">
-                Sabelo
-              </Text>
-            </Stack>
+    <Box pb={60} bg="#0A1A2F">
+      <Header height={100} px="md" bg="#0A1A2F">
+        <Group position="apart" sx={{ height: "100%" }}>
+          <IconHexagonLetterS size={70} color="#0E49B5" />
 
-            <HStack
-              as={"nav"}
-              spacing={4}
-              display={{ base: "none", md: "flex" }}
+          <Group className={classes.hiddenMobile}>
+            <Text
+              color="gray.5"
+              component="a"
+              href="#"
+              className={classes.link}
             >
-              <Stack
-                direction="row"
-                spacing={12}
-                justifyContent="center"
-                ml="20"
-              >
-                <NextLink href="/" passHref>
-                  <CharkaLink
-                    as="button"
-                    fontSize="md"
-                    textTransform="uppercase"
-                    fontWeight="semibold"
-                    letterSpacing={2}
-                    px={1}
-                    py={1}
-                    rounded="md"
-                    _hover={{
-                      textDecoration: "none",
-                      bg: useColorModeValue("#6FDFDF", "gray.800"),
-                    }}
-                  >
-                    Home
-                  </CharkaLink>
-                </NextLink>
-                <NextLink href="about" passHref>
-                  <CharkaLink
-                    as="button"
-                    fontSize="md"
-                    textTransform="uppercase"
-                    fontWeight="semibold"
-                    letterSpacing={1}
-                    px={1}
-                    py={1}
-                    rounded="md"
-                    _hover={{
-                      textDecoration: "none",
-                      bg: useColorModeValue("#6FDFDF", "gray.800"),
-                    }}
-                  >
-                    About
-                  </CharkaLink>
-                </NextLink>
+              <Text color="#0E49B5" px={7}>
+                <Code>01.</Code>
+              </Text>
+              <Code>About</Code>
+            </Text>
 
-                <NextLink href="blog" passHref>
-                  <CharkaLink
-                    as="button"
-                    fontSize="md"
-                    textTransform="uppercase"
-                    fontWeight="semibold"
-                    letterSpacing={2}
-                    px={1}
-                    py={1}
-                    rounded="md"
-                    _hover={{
-                      textDecoration: "none",
-                      bg: useColorModeValue("#6FDFDF", "gray.800"),
-                    }}
-                  >
-                    Blog
-                  </CharkaLink>
-                </NextLink>
+            <Text
+              color="gray.5"
+              component="a"
+              href="#"
+              className={classes.link}
+            >
+              <Text color="#0E49B5" px={7}>
+                <Code>02.</Code>
+              </Text>
+              <Code> Experience</Code>
+            </Text>
 
-                <NextLink href="projects" passHref>
-                  <CharkaLink
-                    as="button"
-                    fontSize="md"
-                    textTransform="uppercase"
-                    fontWeight="semibold"
-                    letterSpacing={2}
-                    px={1}
-                    py={1}
-                    rounded="md"
-                    _hover={{
-                      textDecoration: "none",
-                      bg: useColorModeValue("#6FDFDF", "gray.800"),
-                    }}
-                  >
-                    Projects
-                  </CharkaLink>
-                </NextLink>
+            <Text
+              color="gray.5"
+              component="a"
+              href="#"
+              className={classes.link}
+            >
+              <Text color="#0E49B5" px={7}>
+                <Code>03.</Code>
+              </Text>
+              <Code>Work</Code>
+            </Text>
 
-                <NextLink href="github" passHref>
-                  <CharkaLink
-                    as="button"
-                    fontSize="md"
-                    textTransform="uppercase"
-                    fontWeight="semibold"
-                    letterSpacing={2}
-                    px={1}
-                    py={1}
-                    rounded="md"
-                    _hover={{
-                      textDecoration: "none",
-                      bg: useColorModeValue("#6FDFDF", "gray.800"),
-                    }}
-                  >
-                    Github
-                  </CharkaLink>
-                </NextLink>
+            <Text
+              color="gray.5"
+              component="a"
+              href="#"
+              className={classes.link}
+            >
+              <Text color="#0E49B5" px={7}>
+                <Code>04.</Code>
+              </Text>
+              <Code>Contact</Code>
+            </Text>
 
-                <NextLink href="youtube" passHref>
-                  <CharkaLink
-                    as="button"
-                    fontSize="md"
-                    textTransform="uppercase"
-                    fontWeight="semibold"
-                    letterSpacing={2}
-                    px={1}
-                    py={1}
-                    rounded="md"
-                    _hover={{
-                      textDecoration: "none",
-                      bg: useColorModeValue("#6FDFDF", "gray.800"),
-                    }}
-                  >
-                    YouTube
-                  </CharkaLink>
-                </NextLink>
-                <NextLink href="connect" passHref>
-                  <CharkaLink
-                    as="button"
-                    fontSize="md"
-                    textTransform="uppercase"
-                    fontWeight="semibold"
-                    letterSpacing={2}
-                    px={1}
-                    py={1}
-                    rounded="md"
-                    _hover={{
-                      textDecoration: "none",
-                      bg: useColorModeValue("#6FDFDF", "gray.800"),
-                    }}
-                  >
-                    Connect
-                  </CharkaLink>
-                </NextLink>
+            <Button variant="outline" radius="md">
+              Resume
+            </Button>
+          </Group>
 
-                <Flex alignItems={"center"} py={3}>
-                  <ColorModeSwitcher variant="ghost" size="sm" mr={4} />
-                </Flex>
-              </Stack>
-            </HStack>
-          </HStack>
+          <Burger
+            opened={drawerOpened}
+            onClick={toggleDrawer}
+            className={classes.hiddenDesktop}
+          />
+        </Group>
+      </Header>
 
-          {/* <Flex alignItems={"center"}>
-            <ColorModeSwitcher variant="ghost" size="sm" mr={4} />
-          </Flex> */}
-        </Flex>
+      <Drawer
+        opened={drawerOpened}
+        onClose={closeDrawer}
+        size="100%"
+        padding="md"
+        title="Navigation"
+        className={classes.hiddenDesktop}
+        zIndex={1000000}
+      >
+        <ScrollArea sx={{ height: "calc(100vh - 60px)" }} mx="-md">
+          <Divider my="sm" color="#0A1A2F" />
 
-        {isOpen ? (
-          <Box pb={4} display={{ md: "none" }}>
-            <Stack as={"nav"} spacing={4}>
-              <ColorModeSwitcher variant="ghost" size="sm" mr={4} />
-              <NextLink href="/" passHref>
-                <CharkaLink
-                  px={2}
-                  py={1}
-                  fontSize="md"
-                  textTransform="uppercase"
-                  fontWeight="semibold"
-                  letterSpacing={2}
-                  color="black"
-                  rounded="md"
-                  _hover={{
-                    textDecoration: "none",
-                    bg: "NavButtonBg",
-                  }}
-                >
-                  Home
-                </CharkaLink>
-              </NextLink>
-              <NextLink href="about" passHref>
-                <CharkaLink
-                  px={2}
-                  py={1}
-                  fontSize="md"
-                  textTransform="uppercase"
-                  fontWeight="semibold"
-                  letterSpacing={2}
-                  color="black"
-                  rounded="md"
-                  _hover={{
-                    textDecoration: "none",
-                    bg: "NavButtonBg",
-                  }}
-                >
-                  About
-                </CharkaLink>
-              </NextLink>
-              <NextLink href="blog" passHref>
-                <CharkaLink
-                  px={2}
-                  py={1}
-                  fontSize="md"
-                  textTransform="uppercase"
-                  fontWeight="semibold"
-                  letterSpacing={2}
-                  color="black"
-                  rounded="md"
-                  _hover={{
-                    textDecoration: "none",
-                    bg: "NavButtonBg",
-                  }}
-                >
-                  Blog
-                </CharkaLink>
-              </NextLink>
-              <NextLink href="projects" passHref>
-                <CharkaLink
-                  px={2}
-                  py={1}
-                  fontSize="md"
-                  textTransform="uppercase"
-                  fontWeight="semibold"
-                  letterSpacing={3}
-                  color="black"
-                  rounded="md"
-                  _hover={{
-                    textDecoration: "none",
-                    bg: "NavButtonBg",
-                  }}
-                >
-                  Projects
-                </CharkaLink>
-              </NextLink>
-              <NextLink href="github" passHref>
-                <CharkaLink
-                  px={2}
-                  py={1}
-                  fontSize="md"
-                  textTransform="uppercase"
-                  fontWeight="semibold"
-                  letterSpacing={3}
-                  color="black"
-                  rounded="md"
-                  _hover={{
-                    textDecoration: "none",
-                    bg: "NavButtonBg",
-                  }}
-                >
-                  Github
-                </CharkaLink>
-              </NextLink>
-              <NextLink href="youtube" passHref>
-                <CharkaLink
-                  px={2}
-                  py={1}
-                  fontSize="md"
-                  textTransform="uppercase"
-                  fontWeight="semibold"
-                  letterSpacing={3}
-                  color="black"
-                  rounded="md"
-                  _hover={{
-                    textDecoration: "none",
-                    bg: "NavButtonBg",
-                  }}
-                >
-                  YouTube
-                </CharkaLink>
-              </NextLink>
-              <NextLink href="connect" passHref>
-                <CharkaLink
-                  px={2}
-                  py={1}
-                  fontSize="md"
-                  textTransform="uppercase"
-                  fontWeight="semibold"
-                  letterSpacing={3}
-                  color="black"
-                  rounded="md"
-                  _hover={{
-                    textDecoration: "none",
-                    bg: "NavButtonBg",
-                  }}
-                >
-                  Connect
-                </CharkaLink>
-              </NextLink>
-            </Stack>
-          </Box>
-        ) : null}
-      </Box>
-    </>
+          <Text color="gray.5" component="a" href="#" className={classes.link}>
+            <Text color="#0E49B5" px={7}>
+              01.
+            </Text>
+            About
+          </Text>
+
+          <Text color="gray.5" component="a" href="#" className={classes.link}>
+            <Text color="#0E49B5" px={7}>
+              02.
+            </Text>
+            Experience
+          </Text>
+          <Text color="gray.5" component="a" href="#" className={classes.link}>
+            <Text color="#0E49B5" px={7}>
+              03.
+            </Text>
+            Work
+          </Text>
+          <Text color="gray.5" component="a" href="#" className={classes.link}>
+            <Text color="#0E49B5" px={7}>
+              04.
+            </Text>
+            Contact
+          </Text>
+          <Divider my="sm" color="#0A1A2F" />
+
+          <Group position="center" pb="xl" px="md">
+            <Button variant="outline" radius="md">
+              Resume
+            </Button>
+          </Group>
+        </ScrollArea>
+      </Drawer>
+    </Box>
   );
 }
