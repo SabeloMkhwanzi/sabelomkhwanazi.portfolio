@@ -1,5 +1,12 @@
 import { useState } from "react";
-import { Navbar, createStyles, Stack, Flex, Divider } from "@mantine/core";
+import {
+  Navbar,
+  createStyles,
+  Stack,
+  Flex,
+  Divider,
+  ActionIcon,
+} from "@mantine/core";
 import {
   TablerIcon,
   IconBrandCodepen,
@@ -53,20 +60,47 @@ export default function SideIcon() {
       <Navbar.Section>
         <Stack justify="center" spacing={25}>
           <Flex className={classes.link}>
-            <IconBrandGithub size={30} />
+            <ActionIcon
+              component="a"
+              href="https://github.com/SabeloMkhwanzi"
+              target="_blank"
+            >
+              <IconBrandGithub size={30} />
+            </ActionIcon>
           </Flex>
           <Flex className={classes.link}>
-            <IconBrandTwitter size={30} />
+            <ActionIcon
+              component="a"
+              href="https://twitter.com/SabeloMkhwanaz"
+              target="_blank"
+            >
+              <IconBrandTwitter size={30} />
+            </ActionIcon>
           </Flex>
           <Flex className={classes.link}>
-            <IconBrandLinkedin size={30} />
+            <ActionIcon
+              component="a"
+              href="https://www.linkedin.com/in/sabelo-mkhwanazi-54ba431b1/"
+              target="_blank"
+            >
+              <IconBrandLinkedin size={30} />
+            </ActionIcon>
           </Flex>
-          <Flex className={classes.link}>
-            <IconBrandYoutube size={30} />
-          </Flex>
+          {/* <Flex className={classes.link}>
+            <ActionIcon
+              component="a"
+              href="https://www.youtube.com/@sabelomkhwanazi1329/videos"
+              target="_blank"
+            >
+              <IconBrandYoutube size={30} />
+            </ActionIcon>
+          </Flex> */}
         </Stack>
         <DividerComp />
       </Navbar.Section>
     </Navbar>
   );
 }
+
+git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"

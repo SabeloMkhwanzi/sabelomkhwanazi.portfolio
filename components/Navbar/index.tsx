@@ -20,6 +20,7 @@ import {
 } from "@mantine/core";
 import { useDisclosure, useHover } from "@mantine/hooks";
 import { IconHexagonLetterS } from "@tabler/icons";
+import ResumeDownloader from "../ResumeDownloader";
 
 const useStyles = createStyles((theme) => ({
   link: {
@@ -130,9 +131,7 @@ export default function Navbar() {
               <Code>Contact</Code>
             </Text>
 
-            <Button variant="outline" radius="md">
-              Resume
-            </Button>
+            <ResumeDownloader />
           </Group>
 
           <Burger
@@ -183,9 +182,7 @@ export default function Navbar() {
           <Divider my="sm" color="#0A1A2F" />
 
           <Group position="center" pb="xl" px="md">
-            <Button variant="outline" radius="md">
-              Resume
-            </Button>
+            <ResumeDownloader />
           </Group>
         </ScrollArea>
       </Drawer>

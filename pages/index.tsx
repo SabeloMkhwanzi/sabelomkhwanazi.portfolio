@@ -1,9 +1,19 @@
 import React, { useEffect, useState } from "react";
-import { Box } from "@chakra-ui/react";
 import type { NextPage } from "next";
 import Head from "next/head";
-import { AppShell } from "@mantine/core";
-import { HomePage, Loading, Navbar, SideIcon } from "../components";
+import { AppShell, ScrollArea } from "@mantine/core";
+import {
+  About,
+  Contact,
+  Experience,
+  Footer,
+  HomePage,
+  Loading,
+  Navbar,
+  SideIcon,
+  Work,
+} from "../components";
+import { IconHexagonLetterS } from "@tabler/icons";
 
 const Home: NextPage = () => {
   // const [loading, setLoading] = useState(false);
@@ -18,21 +28,26 @@ const Home: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Sabelo Mkhwanazi - Home</title>
+        <title>Sabelo Mkhwanazi</title>
         <meta name="description" content="Sabelo Personal portfolio site" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <AppShell
         navbar={<SideIcon />}
         header={<Navbar />}
-        // footer={}
-        styles={(theme) => ({
+        styles={{
           main: {
             backgroundColor: "#0A1A2F",
           },
-        })}
+        }}
       >
-        <HomePage />
+        <ScrollArea style={{ height: 800 }}>
+          <HomePage />
+          <About />
+          <Experience />
+          <Work />
+          <Contact />
+        </ScrollArea>
       </AppShell>
     </div>
   );

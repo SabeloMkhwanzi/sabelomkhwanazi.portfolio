@@ -18,7 +18,7 @@ const useStyles = createStyles((theme) => ({
 
   inner: {
     position: "relative",
-    paddingTop: 50,
+    paddingTop: 150,
     paddingBottom: 321,
 
     [BREAKPOINT]: {
@@ -106,8 +106,8 @@ export default function HomePage() {
         </Text>
 
         <Group className={classes.controls}>
-          <Button size="xl" variant="outline" color="#364FC7" radius="lg">
-            CheckMy Build
+          <Button size="lg" variant="outline" color="#364FC7" radius="md">
+            Check My Build
           </Button>
         </Group>
       </Container>
