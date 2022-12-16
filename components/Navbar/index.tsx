@@ -61,6 +61,11 @@ const useStyles = createStyles((theme) => ({
       display: "none",
     },
   },
+
+  board: {
+    borderWidth: "0",
+    //borderColor: "#0A1A2F",
+  },
 }));
 
 export default function Navbar() {
@@ -72,7 +77,7 @@ export default function Navbar() {
 
   return (
     <Box pb={60} bg="#0A1A2F">
-      <Header height={100} px="md" bg="#0A1A2F">
+      <Header height={100} px="md" bg="#0A1A2F" className={classes.board}>
         <Group position="apart" sx={{ height: "100%" }}>
           <IconHexagonLetterS size={70} color="#0E49B5" />
 

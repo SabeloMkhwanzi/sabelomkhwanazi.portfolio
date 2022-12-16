@@ -3,7 +3,7 @@ import { Box } from "@chakra-ui/react";
 import type { NextPage } from "next";
 import Head from "next/head";
 import { AppShell } from "@mantine/core";
-import { HomePage, Loading, Navbar } from "../components";
+import { HomePage, Loading, Navbar, SideIcon } from "../components";
 
 const Home: NextPage = () => {
   // const [loading, setLoading] = useState(false);
@@ -23,9 +23,14 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <AppShell
-        // navbar={}
+        navbar={<SideIcon />}
         header={<Navbar />}
         // footer={}
+        styles={(theme) => ({
+          main: {
+            backgroundColor: "#0A1A2F",
+          },
+        })}
       >
         <HomePage />
       </AppShell>
