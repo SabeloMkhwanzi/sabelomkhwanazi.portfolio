@@ -38,4 +38,4 @@ Finally, run the development server:
 npm run dev
 ```
 
-### Happy Hacking
+### Happy Hacking 😊
