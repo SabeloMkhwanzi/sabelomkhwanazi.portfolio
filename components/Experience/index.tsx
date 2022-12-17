@@ -113,12 +113,7 @@ export default function Experience() {
                   Where I’ve Worked
                 </Text>
               </Group>
-              <Tabs
-                orientation="vertical"
-                defaultValue="Encode"
-                color="blue"
-                variant="outline"
-              >
+              <Tabs orientation="vertical" defaultValue="Encode" color="blue">
                 <Tabs.List>
                   <Tabs.Tab value="Encode">
                     <Text

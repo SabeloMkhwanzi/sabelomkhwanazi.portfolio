@@ -11,7 +11,7 @@ export default function SvgLogo() {
       opacity: 1,
       pathLength: 1,
       transition: {
-        duration: 5,
+        duration: 3,
         ease: "easeInOut",
       },
     },

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
 import { AppShell, ScrollArea } from "@mantine/core";
@@ -9,24 +9,14 @@ import {
   Experience,
   Footer,
   HomePage,
-  Loading,
   Navbar,
   SideIcon,
   Transitions,
   Work,
 } from "../components";
-
 import DividerComp from "../components/DivderComp";
 
 const Home: NextPage = () => {
-  // const [loading, setLoading] = useState(false);
-
-  // useEffect(() => {
-  //   setLoading(true);
-  //   setTimeout(() => {
-  //     setLoading(false);
-  //   }, 2000);
-  // }, []);
   return (
     <div>
       <Head>
@@ -41,10 +31,15 @@ const Home: NextPage = () => {
         styles={{
           main: {
             backgroundColor: "#0A1A2F",
+            width: "100%",
+            height: "100%",
+            position: "fixed",
+            left: "0px",
+            top: "0px",
           },
         }}
       >
-        <ScrollArea style={{ height: 1000 }}>
+        <ScrollArea style={{ height: 850 }}>
           <Transitions>
             <HomePage />
             <DividerComp />
@@ -63,12 +58,3 @@ const Home: NextPage = () => {
 };
 
 export default Home;
-
-// {loading ? (
-//         <Loading />
-//       ) : (
-// //      <Box>
-// //        <Navbar />
-// //        <HomePage />
-// //      </Box>
-//  )}

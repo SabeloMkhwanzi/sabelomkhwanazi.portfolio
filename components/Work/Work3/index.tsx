@@ -38,6 +38,15 @@ const useStyles = createStyles((theme) => ({
     },
   },
 
+  Paper: {
+    transition: "transform 150ms ease, box-shadow 150ms ease",
+
+    "&:hover": {
+      transform: "scale(1.01)",
+      boxShadow: theme.shadows.md,
+    },
+  },
+
   card: {
     height: 350,
     display: "flex",
@@ -50,6 +59,7 @@ const useStyles = createStyles((theme) => ({
 }));
 
 export default function Work3() {
+  const { classes } = useStyles();
   function ProjectInfo() {
     return (
       <Paper
@@ -58,8 +68,9 @@ export default function Work3() {
         sx={{
           backgroundColor: "#112240",
         }}
+        className={classes.Paper}
       >
-        <Text color="gray.5" className={Jaldi.className}>
+        <Text mb={10} color="gray.5" className={Jaldi.className}>
           A web3 freelance marketplace service, That connects talents to open
           projects or opportunities looking to hire. Accelerating the use of
           decentralized world.
@@ -119,6 +130,12 @@ export default function Work3() {
           backgroundImage: `url(${"/gigiblock.jpg"})`,
           borderColor: "#0E49B5",
           borderWidth: 1,
+          transition: "transform 150ms ease, box-shadow 150ms ease",
+
+          "&:hover": {
+            transform: "scale(1.01)",
+            boxShadow: "md",
+          },
         }}
         className={classes.card}
       />

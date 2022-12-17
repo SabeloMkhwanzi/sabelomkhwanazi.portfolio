@@ -38,6 +38,15 @@ const useStyles = createStyles((theme) => ({
     },
   },
 
+  Paper: {
+    transition: "transform 150ms ease, box-shadow 150ms ease",
+
+    "&:hover": {
+      transform: "scale(1.01)",
+      boxShadow: theme.shadows.md,
+    },
+  },
+
   card: {
     height: 350,
     display: "flex",
@@ -60,8 +69,9 @@ export default function Work4() {
         sx={{
           backgroundColor: "#112240",
         }}
+        className={classes.Paper}
       >
-        <Text color="gray.5" className={Jaldi.className}>
+        <Text mb={10} color="gray.5" className={Jaldi.className}>
           Multify is a multi-chain analytics dashboard, a tool for Investors,
           Cryptocurrence holders to visualize, analyse data on various
           blockchains and decentralization exchanges on one platform.
@@ -119,6 +129,12 @@ export default function Work4() {
           backgroundImage: `url(${"/Multify_hp.jpg"})`,
           borderColor: "#0E49B5",
           borderWidth: 1,
+          transition: "transform 150ms ease, box-shadow 150ms ease",
+
+          "&:hover": {
+            transform: "scale(1.01)",
+            boxShadow: "md",
+          },
         }}
         className={classes.card}
       />

@@ -38,6 +38,15 @@ const useStyles = createStyles((theme) => ({
     },
   },
 
+  Paper: {
+    transition: "transform 150ms ease, box-shadow 150ms ease",
+
+    "&:hover": {
+      transform: "scale(1.01)",
+      boxShadow: theme.shadows.md,
+    },
+  },
+
   card: {
     height: 350,
     display: "flex",
@@ -60,8 +69,9 @@ export default function Work2() {
         sx={{
           backgroundColor: "#112240",
         }}
+        className={classes.Paper}
       >
-        <Text color="gray.5" className={Jaldi.className}>
+        <Text mb={10} color="gray.5" className={Jaldi.className}>
           A web3-based Airbnb contender. Decentralized DApp for the home-share,
           hosting and NFT user sharing there experiences. Using web3
           Decentralized technology.
@@ -126,6 +136,12 @@ export default function Work2() {
           backgroundImage: `url(${"/thirdbnb.jpg"})`,
           borderColor: "#0E49B5",
           borderWidth: 1,
+          transition: "transform 150ms ease, box-shadow 150ms ease",
+
+          "&:hover": {
+            transform: "scale(1.01)",
+            boxShadow: "md",
+          },
         }}
         className={classes.card}
       />

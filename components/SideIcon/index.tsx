@@ -3,7 +3,7 @@ import {
   createStyles,
   Stack,
   Flex,
-  Divider,
+  UnstyledButton,
   ActionIcon,
 } from "@mantine/core";
 import {
@@ -19,23 +19,23 @@ const useStyles = createStyles((theme) => ({
     paddingLeft: theme.spacing.sm,
     paddingRight: theme.spacing.sm,
     color: "#8892B0",
+  },
 
-    "&:hover": {
-      color: theme.colors.blue[9],
+  hidden: {
+    [theme.fn.smallerThan("sm")]: {
+      display: "none",
     },
   },
 
-  board: {
-    borderWidth: "0",
-    //borderColor: "#0A1A2F",
+  icon: {
+    transition: "transform 150ms ease, box-shadow 150ms ease",
+
+    "&:hover": {
+      transform: "scale(1.01)",
+      boxShadow: theme.shadows.md,
+    },
   },
 }));
-
-function DividerComp() {
-  return (
-    <Divider size="sm" orientation="vertical" color="#8892B0" variant="solid" />
-  );
-}
 
 export default function SideIcon() {
   const { classes } = useStyles();
@@ -43,10 +43,14 @@ export default function SideIcon() {
   return (
     <Navbar
       bg="#0A1A2F"
-      height={750}
-      width={{ base: 80 }}
+      height={700}
+      width={{ base: 10, xl: 80 }}
       p="md"
-      className={classes.board}
+      title="Navigation"
+      className={classes.hidden}
+      style={{
+        borderWidth: "0",
+      }}
     >
       <Navbar.Section grow mt={30}>
         <Stack justify="center" spacing={0}></Stack>
@@ -56,11 +60,13 @@ export default function SideIcon() {
         <Stack justify="center" spacing={25}>
           <Flex className={classes.link}>
             <ActionIcon
+              color="#8892B0"
               component="a"
               href="https://github.com/SabeloMkhwanzi"
               target="_blank"
+              variant="subtle"
             >
-              <IconBrandGithub size={30} />
+              <IconBrandGithub color="#0E49B5" size={30} />
             </ActionIcon>
           </Flex>
           <Flex className={classes.link}>
@@ -69,7 +75,7 @@ export default function SideIcon() {
               href="https://twitter.com/SabeloMkhwanaz"
               target="_blank"
             >
-              <IconBrandTwitter size={30} />
+              <IconBrandTwitter color="#0E49B5" size={30} />
             </ActionIcon>
           </Flex>
           <Flex className={classes.link}>
@@ -78,11 +84,10 @@ export default function SideIcon() {
               href="https://www.linkedin.com/in/sabelo-mkhwanazi-54ba431b1/"
               target="_blank"
             >
-              <IconBrandLinkedin size={30} />
+              <IconBrandLinkedin color="#0E49B5" size={30} />
             </ActionIcon>
           </Flex>
         </Stack>
-        <DividerComp />
       </Navbar.Section>
     </Navbar>
   );

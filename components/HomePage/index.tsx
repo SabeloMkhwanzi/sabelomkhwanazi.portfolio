@@ -1,7 +1,5 @@
 import { createStyles, Container, Text, Button, Group } from "@mantine/core";
-
 import localFont from "@next/font/local";
-import SvgLogo from "../SvgLogo";
 import Transitions from "../Transitions";
 
 // Font files can be colocated inside of `pages`
@@ -135,7 +133,6 @@ export default function HomePage() {
               >
                 Check My Builds
               </Button>
-              <SvgLogo />
             </Group>
           </Container>
         </div>

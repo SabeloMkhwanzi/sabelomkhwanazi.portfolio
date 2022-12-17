@@ -9,15 +9,20 @@ import {
   Burger,
   Drawer,
   ScrollArea,
+  ActionIcon,
+  Flex,
+  SimpleGrid,
+  useMantineTheme,
 } from "@mantine/core";
+
 import { useDisclosure, useHover } from "@mantine/hooks";
 import { IconHexagonLetterS } from "@tabler/icons";
 import ResumeDownloader from "../ResumeDownloader";
-
-import localFont from "@next/font/local";
-
-// Font files can be colocated inside of `pages`
-const Amaranth = localFont({ src: "../../fonts/Amaranth-Bold.ttf" });
+import {
+  IconBrandLinkedin,
+  IconBrandGithub,
+  IconBrandTwitter,
+} from "@tabler/icons";
 
 const useStyles = createStyles((theme) => ({
   link: {
@@ -71,7 +76,7 @@ export default function Navbar() {
     useDisclosure(false);
   const [linksOpened, { toggle: toggleLinks }] = useDisclosure(false);
   const { classes, theme } = useStyles();
-  const { hovered, ref } = useHover();
+  const them = useMantineTheme();
 
   return (
     <Box pb={60} bg="#0A1A2F">
@@ -147,6 +152,7 @@ export default function Navbar() {
         title="Navigation"
         className={classes.hiddenDesktop}
         zIndex={1000000}
+        overlayColor="#8892B0"
       >
         <ScrollArea sx={{ height: "calc(100vh - 60px)" }} mx="-md">
           <Divider my="sm" color="#0A1A2F" />
@@ -204,6 +210,35 @@ export default function Navbar() {
           <Group position="center" pb="xl" px="md">
             <ResumeDownloader />
           </Group>
+          <SimpleGrid>
+            <Flex className={classes.link}>
+              <ActionIcon
+                component="a"
+                href="https://github.com/SabeloMkhwanzi"
+                target="_blank"
+              >
+                <IconBrandGithub size={30} />
+              </ActionIcon>
+            </Flex>
+            <Flex className={classes.link}>
+              <ActionIcon
+                component="a"
+                href="https://twitter.com/SabeloMkhwanaz"
+                target="_blank"
+              >
+                <IconBrandTwitter size={30} />
+              </ActionIcon>
+            </Flex>
+            <Flex className={classes.link}>
+              <ActionIcon
+                component="a"
+                href="https://www.linkedin.com/in/sabelo-mkhwanazi-54ba431b1/"
+                target="_blank"
+              >
+                <IconBrandLinkedin size={30} />
+              </ActionIcon>
+            </Flex>
+          </SimpleGrid>
         </ScrollArea>
       </Drawer>
     </Box>

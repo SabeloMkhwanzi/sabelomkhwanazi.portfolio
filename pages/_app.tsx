@@ -1,34 +1,42 @@
+import React, { useEffect, useState } from "react";
 import { AppProps } from "next/app";
-import Head from "next/head";
 import { MantineProvider } from "@mantine/core";
+import { WelcomeScreen } from "../components";
 
 export default function App(props: AppProps) {
   const { Component, pageProps } = props;
+  const [loading, setLoading] = React.useState(false);
+
+  React.useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+  }, []);
 
   return (
     <>
-      <Head>
-        <title>Page title</title>
-        <meta
-          name="viewport"
-          content="minimum-scale=1, initial-scale=1, width=device-width"
-        />
-      </Head>
-
       <MantineProvider
         withGlobalStyles
         withNormalizeCSS
         theme={{
-          /** Put your mantine theme override here */
           colorScheme: "light",
           colors: {
             bgColor: ["#0A1A2F"],
           },
-          fontFamilyMonospace: "Monaco, Courier, monospace",
         }}
       >
-        <Component {...pageProps} />
+        {!loading ? <Component {...pageProps} /> : <WelcomeScreen />}
       </MantineProvider>
     </>
   );
 }
+
+// {loading ? (
+//         <Loading />
+//       ) : (
+// //      <Box>
+// //        <Navbar />
+// //        <HomePage />
+// //      </Box>
+//  )}

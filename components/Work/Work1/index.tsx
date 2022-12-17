@@ -38,6 +38,15 @@ const useStyles = createStyles((theme) => ({
     },
   },
 
+  Paper: {
+    transition: "transform 150ms ease, box-shadow 150ms ease",
+
+    "&:hover": {
+      transform: "scale(1.01)",
+      boxShadow: theme.shadows.md,
+    },
+  },
+
   card: {
     height: 350,
     display: "flex",
@@ -50,6 +59,7 @@ const useStyles = createStyles((theme) => ({
 }));
 
 export default function Work1() {
+  const { classes } = useStyles();
   function ProjectInfo() {
     return (
       <Paper
@@ -58,8 +68,9 @@ export default function Work1() {
         sx={{
           backgroundColor: "#112240",
         }}
+        className={classes.Paper}
       >
-        <Text color="gray.5" className={Jaldi.className}>
+        <Text mb={10} color="gray.5" className={Jaldi.className}>
           Providing a visual analytics front-end, with rich information about
           the health and performance of Dex on Evmos ecosystem, Powered by Evmos
           x Covalent.
@@ -126,6 +137,12 @@ export default function Work1() {
           backgroundImage: `url(${"/Diffusion_Dex_hp.jpg"})`,
           borderColor: "#0E49B5",
           borderWidth: 1,
+          transition: "transform 150ms ease, box-shadow 150ms ease",
+
+          "&:hover": {
+            transform: "scale(1.01)",
+            boxShadow: "md",
+          },
         }}
         className={classes.card}
       />

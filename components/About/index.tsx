@@ -41,6 +41,15 @@ const useStyles = createStyles((theme) => ({
     },
   },
 
+  Paper: {
+    transition: "transform 150ms ease, box-shadow 150ms ease",
+
+    "&:hover": {
+      transform: "scale(1.01)",
+      boxShadow: theme.shadows.md,
+    },
+  },
+
   content: {
     maxWidth: 480,
     marginRight: theme.spacing.xl * 3,
@@ -238,6 +247,14 @@ export default function About() {
               src="/Sabelologo.png"
               alt="Sabelologo"
               className={classes.image}
+              sx={{
+                transition: "transform 150ms ease, box-shadow 150ms ease",
+                "&:hover": {
+                  transform: "scale(1.01)",
+                  boxShadow: "md",
+                  color: "blue",
+                },
+              }}
             />
           </div>
         </Container>
