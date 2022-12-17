@@ -23,7 +23,7 @@
 1. clone the repo with the following git command:
 
 ```bash
-git clone https://github.com/SabeloMkhwanzi/eddalytics
+git clone https://github.com/SabeloMkhwanzi/sabelo_portfolio
 ```
 
 2. open a terminal in the root directory of the project and run:
