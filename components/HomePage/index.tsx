@@ -116,7 +116,7 @@ export default function HomePage() {
     <>
       <Transitions>
         <div className={classes.wrapper}>
-          <Container size={900} className={classes.inner} bg="bgColor">
+          <Container size={900} className={classes.inner} bg="bgColor" id="/">
             <Text fz={25} color="#0E49B5" className={SpecialElite.className}>
               Hi, There 👋 I’m
             </Text>

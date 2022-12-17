@@ -5,9 +5,9 @@ import { WelcomeScreen } from "../components";
 
 export default function App(props: AppProps) {
   const { Component, pageProps } = props;
-  const [loading, setLoading] = React.useState(false);
+  const [loading, setLoading] = useState(false);
 
-  React.useEffect(() => {
+  useEffect(() => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
