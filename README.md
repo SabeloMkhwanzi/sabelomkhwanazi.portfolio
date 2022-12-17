@@ -1,31 +1,41 @@
 
 
-<h1 align="center">
+<h2 align="center">
    <b>
         <a href=""><img src="https://github.com/SabeloMkhwanzi/sabelo_portfolio/blob/main/public/logo.sabelo.png" /></a><br>
     </b>
-</h1>
+</h2>
 
 
 <p align="center">
     <a href=""><b>Website</b></a>
 </p> 
 
-<h1 align="center">
- Sabelo Mkhwanazi Portfolio Site 
-</h1>
+<h2 align="center">
+ Sabelo Mkhwanazi 
+</h2>
 
-Providing a visual analytics front-end with rich information about the health and performance of Dex on Evmos ecosystem - Powered by Evmos x Covalent. 
+#### A NextJS portfolio site build with Mantine & Chakra-UI
 
 
-## Getting Started
+## Installing
 
-First, run the development server:
+1. clone the repo with the following git command:
+
+```bash
+git clone https://github.com/SabeloMkhwanzi/eddalytics
+```
+
+2. open a terminal in the root directory of the project and run:
+
+```bash
+npm install
+```
+
+Finally, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
 ```
 
 ### Happy Hacking
