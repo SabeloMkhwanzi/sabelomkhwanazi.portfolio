@@ -2,20 +2,12 @@ import { Code } from "@chakra-ui/react";
 import {
   createStyles,
   Header,
-  HoverCard,
   Group,
-  Button,
-  UnstyledButton,
   Text,
-  SimpleGrid,
-  ThemeIcon,
-  Anchor,
   Divider,
-  Center,
   Box,
   Burger,
   Drawer,
-  Collapse,
   ScrollArea,
 } from "@mantine/core";
 import { useDisclosure, useHover } from "@mantine/hooks";
@@ -91,7 +83,7 @@ export default function Navbar() {
             <Text
               color="gray.5"
               component="a"
-              href="#"
+              href="#aboutPage"
               className={classes.link}
             >
               <Text color="#0E49B5" px={7}>
@@ -103,7 +95,7 @@ export default function Navbar() {
             <Text
               color="gray.5"
               component="a"
-              href="#"
+              href="#experiencePage"
               className={classes.link}
             >
               <Text color="#0E49B5" px={7}>
@@ -115,7 +107,7 @@ export default function Navbar() {
             <Text
               color="gray.5"
               component="a"
-              href="#"
+              href="#workPage"
               className={classes.link}
             >
               <Text color="#0E49B5" px={7}>
@@ -127,7 +119,7 @@ export default function Navbar() {
             <Text
               color="gray.5"
               component="a"
-              href="#"
+              href="#contactPage"
               className={classes.link}
             >
               <Text color="#0E49B5" px={7}>
@@ -159,31 +151,54 @@ export default function Navbar() {
         <ScrollArea sx={{ height: "calc(100vh - 60px)" }} mx="-md">
           <Divider my="sm" color="#0A1A2F" />
 
-          <Text color="gray.5" component="a" href="#" className={classes.link}>
+          <Text
+            color="gray.5"
+            component="a"
+            href="#aboutPage"
+            className={classes.link}
+          >
             <Text color="#0E49B5" px={7}>
               01.
             </Text>
             About
           </Text>
 
-          <Text color="gray.5" component="a" href="#" className={classes.link}>
+          <Text
+            href="#experiencePage"
+            color="gray.5"
+            component="a"
+            className={classes.link}
+          >
             <Text color="#0E49B5" px={7}>
               02.
             </Text>
             Experience
           </Text>
-          <Text color="gray.5" component="a" href="#" className={classes.link}>
+
+          <Text
+            color="gray.5"
+            component="a"
+            href="#workPage"
+            className={classes.link}
+          >
             <Text color="#0E49B5" px={7}>
               03.
             </Text>
             Work
           </Text>
-          <Text color="gray.5" component="a" href="#" className={classes.link}>
+
+          <Text
+            color="gray.5"
+            component="a"
+            href="#contactPage"
+            className={classes.link}
+          >
             <Text color="#0E49B5" px={7}>
               04.
             </Text>
             Contact
           </Text>
+
           <Divider my="sm" color="#0A1A2F" />
 
           <Group position="center" pb="xl" px="md">

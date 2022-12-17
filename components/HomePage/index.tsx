@@ -1,13 +1,8 @@
-import {
-  createStyles,
-  Container,
-  Text,
-  Button,
-  Group,
-  Code,
-} from "@mantine/core";
+import { createStyles, Container, Text, Button, Group } from "@mantine/core";
 
 import localFont from "@next/font/local";
+import SvgLogo from "../SvgLogo";
+import Transitions from "../Transitions";
 
 // Font files can be colocated inside of `pages`
 const Amaranth = localFont({ src: "../../fonts/Amaranth-Bold.ttf" });
@@ -95,44 +90,56 @@ export default function HomePage() {
   const { classes } = useStyles();
 
   return (
-    <div className={classes.wrapper}>
-      <Container size={900} className={classes.inner} bg="bgColor">
-        <Text fz={25} color="#0E49B5" className={SpecialElite.className}>
-          Hi, my name is
-        </Text>
-        <h1 className={classes.title}>
-          <Text
-            className={Amaranth.className}
-            component="span"
-            color="#CCD6F6"
-            inherit
-          >
-            Sabelo Mkhwanazi
-          </Text>
+    <>
+      <Transitions>
+        <div className={classes.wrapper}>
+          <Container size={900} className={classes.inner} bg="bgColor">
+            <Text fz={25} color="#0E49B5" className={SpecialElite.className}>
+              Hi, my name is
+            </Text>
+            <h1 className={classes.title}>
+              <Text
+                className={Amaranth.className}
+                component="span"
+                color="#CCD6F6"
+                inherit
+              >
+                Sabelo Mkhwanazi
+              </Text>
 
-          <br />
-          <Text
-            className={Amaranth.className}
-            component="span"
-            color="#8892B0"
-            inherit
-          >
-            I build with code...
-          </Text>
-        </h1>
+              <br />
+              <Text
+                className={Amaranth.className}
+                component="span"
+                color="#8892B0"
+                inherit
+              >
+                I enjoy building with code...
+              </Text>
+            </h1>
 
-        <Text fz={24} className={Jaldi.className} color="#8892B0">
-          I’m a software developer specializing in building amazing Apps. A
-          blockchain Enthusiast, hacking and building dapps that promotes
-          decentralization.
-        </Text>
+            <Text fz={24} className={Jaldi.className} color="#8892B0">
+              I’m a software developer specializing in building amazing Apps. A
+              blockchain Enthusiast, hacking and building dapps that promotes
+              decentralization.
+            </Text>
 
-        <Group className={classes.controls}>
-          <Button size="lg" variant="outline" color="#364FC7" radius="md">
-            Check My Build
-          </Button>
-        </Group>
-      </Container>
-    </div>
+            <Group className={classes.controls}>
+              <Button
+                size="lg"
+                variant="outline"
+                color="#364FC7"
+                radius="md"
+                href="#workPage"
+                component="a"
+              >
+                Check My Builds
+              </Button>
+              <SvgLogo />
+            </Group>
+          </Container>
+        </div>
+      </Transitions>
+    </>
   );
 }

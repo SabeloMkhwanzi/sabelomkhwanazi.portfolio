@@ -1,8 +1,6 @@
 import React from "react";
 import { Spinner, Center } from "@chakra-ui/react";
 
-//import { Center, Loader } from "@mantine/core";
-
 export default function Loading() {
   return (
     <>

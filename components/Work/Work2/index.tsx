@@ -3,7 +3,6 @@ import {
   Container,
   SimpleGrid,
   Text,
-  Title,
   Group,
   createStyles,
   Badge,

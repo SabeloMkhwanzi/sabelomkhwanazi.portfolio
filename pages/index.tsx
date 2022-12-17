@@ -2,18 +2,19 @@ import React, { useEffect, useState } from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
 import { AppShell, ScrollArea } from "@mantine/core";
+
 import {
   About,
   Contact,
   Experience,
-  Footer,
   HomePage,
   Loading,
   Navbar,
   SideIcon,
+  Transitions,
   Work,
 } from "../components";
-import { IconHexagonLetterS } from "@tabler/icons";
+
 import DividerComp from "../components/DivderComp";
 
 const Home: NextPage = () => {
@@ -25,7 +26,6 @@ const Home: NextPage = () => {
   //     setLoading(false);
   //   }, 2000);
   // }, []);
-
   return (
     <div>
       <Head>
@@ -33,6 +33,7 @@ const Home: NextPage = () => {
         <meta name="description" content="Sabelo Personal portfolio site" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       <AppShell
         navbar={<SideIcon />}
         header={<Navbar />}
@@ -42,15 +43,17 @@ const Home: NextPage = () => {
           },
         }}
       >
-        <ScrollArea style={{ height: 800 }}>
-          <HomePage />
-          <DividerComp />
-          <About />
-          <DividerComp />
-          <Experience />
-          <Work />
-          <DividerComp />
-          <Contact />
+        <ScrollArea style={{ height: 1000 }}>
+          <Transitions>
+            <HomePage />
+            <DividerComp />
+            <About />
+            <DividerComp />
+            <Experience />
+            <Work />
+            <DividerComp />
+            <Contact />
+          </Transitions>
         </ScrollArea>
       </AppShell>
     </div>
@@ -59,13 +62,11 @@ const Home: NextPage = () => {
 
 export default Home;
 
-//  {
-//    loading ? (
-//      <Loading />
-//    ) : (
-//      <Box>
-//        <Navbar />
-//        <HomePage />
-//      </Box>
-//    );
-//  }
+// {loading ? (
+//         <Loading />
+//       ) : (
+// //      <Box>
+// //        <Navbar />
+// //        <HomePage />
+// //      </Box>
+//  )}

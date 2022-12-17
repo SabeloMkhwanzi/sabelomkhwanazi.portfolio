@@ -1,12 +1,6 @@
-import { createStyles, Title, Text, Button, Container } from "@mantine/core";
+import { createStyles, Title, Text, Container } from "@mantine/core";
 import EmailButton from "../EmailButton";
-
-import localFont from "@next/font/local";
-
-// Font files can be colocated inside of `pages`
-const Amaranth = localFont({ src: "../../fonts/Amaranth-Bold.ttf" });
-const SpecialElite = localFont({ src: "../../fonts/SpecialElite-Regular.ttf" });
-const Jaldi = localFont({ src: "../../fonts/Jaldi-Regular.ttf" });
+import Transitions from "../Transitions";
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
@@ -23,23 +17,6 @@ const useStyles = createStyles((theme) => ({
   inner: {
     position: "relative",
     zIndex: 1,
-  },
-
-  dots: {
-    position: "absolute",
-    color:
-      theme.colorScheme === "dark"
-        ? theme.colors.dark[5]
-        : theme.colors.gray[1],
-
-    "@media (max-width: 755px)": {
-      display: "none",
-    },
-  },
-
-  dotsLeft: {
-    left: 0,
-    top: 0,
   },
 
   title: {
@@ -102,18 +79,22 @@ export default function Contact() {
   const { classes } = useStyles();
 
   return (
-    <Container className={classes.wrapper} size={1400}>
-      <div className={classes.inner}>
-        <Title className={classes.title}> Thanks for Passing by</Title>{" "}
-        <Container p={0} size={600}>
-          <Text size="lg" color="dimmed" className={classes.description}>
-            Lets Build some cool stuff with code!!!
-          </Text>
+    <>
+      <Transitions>
+        <Container className={classes.wrapper} size={1400} id="contactPage">
+          <div className={classes.inner}>
+            <Title className={classes.title}> Thanks for Passing by</Title>{" "}
+            <Container p={0} size={600}>
+              <Text size="lg" color="dimmed" className={classes.description}>
+                Lets Build some amazing things with code!!!
+              </Text>
+            </Container>
+            <div className={classes.controls}>
+              <EmailButton />
+            </div>
+          </div>
         </Container>
-        <div className={classes.controls}>
-          <EmailButton />
-        </div>
-      </div>
-    </Container>
+      </Transitions>
+    </>
   );
 }

@@ -14,3 +14,5 @@ export { default as Contact } from "./Contact";
 export { default as ResumeDownloader } from "./ResumeDownloader";
 export { default as EmailButton } from "./EmailButton";
 export { default as DividerComp } from "./EmailButton";
+export { default as Transitions } from "./Transitions";
+export { default as SvgLogo } from "./SvgLogo";

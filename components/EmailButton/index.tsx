@@ -42,7 +42,7 @@ export default function EmailButton() {
       color="gray"
       onClick={() => router.push("mailto:sabelo.mailme@gmail.com")}
     >
-      Contact Me
+      You Say Hi👋
     </Button>
   );
 }

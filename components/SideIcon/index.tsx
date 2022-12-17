@@ -7,10 +7,6 @@ import {
   ActionIcon,
 } from "@mantine/core";
 import {
-  TablerIcon,
-  IconBrandCodepen,
-  IconBrandYoutube,
-  IconBrandMedium,
   IconBrandLinkedin,
   IconBrandGithub,
   IconBrandTwitter,
@@ -85,15 +81,6 @@ export default function SideIcon() {
               <IconBrandLinkedin size={30} />
             </ActionIcon>
           </Flex>
-          {/* <Flex className={classes.link}>
-            <ActionIcon
-              component="a"
-              href="https://www.youtube.com/@sabelomkhwanazi1329/videos"
-              target="_blank"
-            >
-              <IconBrandYoutube size={30} />
-            </ActionIcon>
-          </Flex> */}
         </Stack>
         <DividerComp />
       </Navbar.Section>
