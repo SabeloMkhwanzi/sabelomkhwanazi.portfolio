@@ -35,7 +35,7 @@ const useStyles = createStyles((theme) => ({
     fontSize: theme.fontSizes.md,
 
     "&:hover": {
-      color: theme.colors.blue[9],
+      color: "#0E49B5",
     },
   },
 
@@ -92,7 +92,7 @@ export default function Navbar() {
               className={classes.link}
             >
               <Text color="#0E49B5" px={7}>
-                <Code>01.</Code>
+                {/* <Code>01.</Code> */}
               </Text>
               <Code>About</Code>
             </Text>
@@ -104,7 +104,7 @@ export default function Navbar() {
               className={classes.link}
             >
               <Text color="#0E49B5" px={7}>
-                <Code>02.</Code>
+                {/* <Code>02.</Code> */}
               </Text>
               <Code> Experience</Code>
             </Text>
@@ -116,9 +116,9 @@ export default function Navbar() {
               className={classes.link}
             >
               <Text color="#0E49B5" px={7}>
-                <Code>03.</Code>
+                {/* <Code>03.</Code> */}
               </Text>
-              <Code>Work</Code>
+              <Code>Portfolio</Code>
             </Text>
 
             <Text
@@ -128,9 +128,9 @@ export default function Navbar() {
               className={classes.link}
             >
               <Text color="#0E49B5" px={7}>
-                <Code>04.</Code>
+                {/* <Code>04.</Code> */}
               </Text>
-              <Code>Contact</Code>
+              <Code>Contact me</Code>
             </Text>
 
             <ResumeDownloader />
@@ -163,9 +163,9 @@ export default function Navbar() {
             href="#aboutPage"
             className={classes.link}
           >
-            <Text color="#0E49B5" px={7}>
+            {/* <Text color="#0E49B5" px={7}>
               01.
-            </Text>
+            </Text> */}
             About
           </Text>
 
@@ -175,9 +175,9 @@ export default function Navbar() {
             component="a"
             className={classes.link}
           >
-            <Text color="#0E49B5" px={7}>
+            {/* <Text color="#0E49B5" px={7}>
               02.
-            </Text>
+            </Text> */}
             Experience
           </Text>
 
@@ -187,10 +187,10 @@ export default function Navbar() {
             href="#workPage"
             className={classes.link}
           >
-            <Text color="#0E49B5" px={7}>
+            {/* <Text color="#0E49B5" px={7}>
               03.
-            </Text>
-            Work
+            </Text> */}
+            Portfolio
           </Text>
 
           <Text
@@ -199,10 +199,10 @@ export default function Navbar() {
             href="#contactPage"
             className={classes.link}
           >
-            <Text color="#0E49B5" px={7}>
+            {/* <Text color="#0E49B5" px={7}>
               04.
-            </Text>
-            Contact
+            </Text> */}
+            Contact me
           </Text>
 
           <Divider my="sm" color="#0A1A2F" />

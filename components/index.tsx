@@ -17,3 +17,4 @@ export { default as DividerComp } from "./EmailButton";
 export { default as Transitions } from "./Transitions";
 export { default as SvgLogo } from "./SvgLogo";
 export { default as WelcomeScreen } from "./WelcomeScreen";
+export { default as BackgroundAnimation } from "./BackgroundAnimation";

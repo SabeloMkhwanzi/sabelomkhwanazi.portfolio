@@ -96,13 +96,13 @@ export default function Experience() {
           <div className={classes.inner}>
             <div className={classes.content}>
               <Group mb={20}>
-                <Text
+                {/* <Text
                   fz={20}
                   color="#0E49B5"
                   className={SpecialElite.className}
                 >
                   02.
-                </Text>
+                </Text> */}
                 <Text
                   color="gray.5"
                   component="a"
@@ -110,7 +110,7 @@ export default function Experience() {
                   fz={25}
                   fw="bold"
                 >
-                  Where I’ve Worked
+                  Experience
                 </Text>
               </Group>
               <Tabs orientation="vertical" defaultValue="Encode" color="blue">

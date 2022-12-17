@@ -105,13 +105,13 @@ export default function About() {
           <div className={classes.inner}>
             <div className={classes.content}>
               <Group>
-                <Text
+                {/* <Text
                   fz={20}
                   color="#0E49B5"
                   className={SpecialElite.className}
                 >
                   01.
-                </Text>
+                </Text> */}
                 <Text
                   color="gray.5"
                   component="a"

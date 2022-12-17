@@ -1,5 +1,16 @@
-import { createStyles, Container, Text, Button, Group } from "@mantine/core";
+import {
+  createStyles,
+  Container,
+  Text,
+  Button,
+  Group,
+  Flex,
+  Box,
+  Image,
+} from "@mantine/core";
 import localFont from "@next/font/local";
+import BackgroundAnimation from "../BackgroundAnimation";
+
 import Transitions from "../Transitions";
 
 // Font files can be colocated inside of `pages`
@@ -82,6 +93,20 @@ const useStyles = createStyles((theme) => ({
     fontSize: theme.fontSizes.lg,
     color: theme.colors.blue[9],
   },
+
+  image: {
+    flex: 1,
+
+    [theme.fn.smallerThan("lg")]: {
+      display: "none",
+    },
+  },
+
+  hero: {
+    position: "relative",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  },
 }));
 
 export default function HomePage() {
@@ -93,7 +118,7 @@ export default function HomePage() {
         <div className={classes.wrapper}>
           <Container size={900} className={classes.inner} bg="bgColor">
             <Text fz={25} color="#0E49B5" className={SpecialElite.className}>
-              Hi, my name is
+              Hi, There 👋 I’m
             </Text>
             <h1 className={classes.title}>
               <Text
@@ -106,12 +131,7 @@ export default function HomePage() {
               </Text>
 
               <br />
-              <Text
-                className={Amaranth.className}
-                component="span"
-                color="#8892B0"
-                inherit
-              >
+              <Text className={Amaranth.className} color="#0E49B5">
                 I enjoy building with code...
               </Text>
             </h1>

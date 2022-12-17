@@ -17,9 +17,9 @@ export default function Work() {
       <Transitions>
         <Container my="lg" id="workPage">
           <Group>
-            <Text fz={20} color="#0E49B5" className={SpecialElite.className}>
+            {/* <Text fz={20} color="#0E49B5" className={SpecialElite.className}>
               03.
-            </Text>
+            </Text> */}
             <Text
               color="gray.5"
               component="a"
@@ -27,7 +27,7 @@ export default function Work() {
               fz={25}
               fw="bold"
             >
-              Some Things I’ve Built
+              Portfolio Projects
             </Text>
           </Group>
           <Work1 />
