@@ -12,6 +12,16 @@ import {
   Paper,
 } from "@mantine/core";
 import { IconExternalLink, IconBrandGithub } from "@tabler/icons";
+import localFont from "@next/font/local";
+
+// Font files can be colocated inside of `pages`
+const Amaranth = localFont({ src: "../../../fonts/Amaranth-Bold.ttf" });
+
+const SpecialElite = localFont({
+  src: "../../../fonts/SpecialElite-Regular.ttf",
+});
+
+const Jaldi = localFont({ src: "../../../fonts/Jaldi-Regular.ttf" });
 
 const useStyles = createStyles((theme) => ({
   link: {
@@ -30,7 +40,7 @@ const useStyles = createStyles((theme) => ({
   },
 
   card: {
-    height: 400,
+    height: 350,
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
@@ -52,11 +62,47 @@ export default function Work4() {
           backgroundColor: "#112240",
         }}
       >
-        <Text color="gray.5">
+        <Text color="gray.5" className={Jaldi.className}>
           Multify is a multi-chain analytics dashboard, a tool for Investors,
           Cryptocurrence holders to visualize, analyse data on various
           blockchains and decentralization exchanges on one platform.
         </Text>
+        <Stack align="flex-end" justify="flex-end">
+          <Group>
+            <Badge color="#0E49B5" variant="outline">
+              TypeScript
+            </Badge>
+            <Badge color="#0E49B5" variant="outline">
+              Next JS
+            </Badge>
+
+            <Badge color="#0E49B5" variant="outline">
+              Covalent-API
+            </Badge>
+            <Badge color="#0E49B5" variant="outline">
+              Chakra-UI
+            </Badge>
+          </Group>
+
+          <Group>
+            <ActionIcon
+              component="a"
+              href="https://github.com/SabeloMkhwanzi/Multify-Analytics-Dashboard"
+              target="_blank"
+              color="#0E49B5"
+            >
+              <IconBrandGithub size={20} />
+            </ActionIcon>
+            <ActionIcon
+              component="a"
+              href="https://multify.vercel.app/"
+              target="_blank"
+              color="#0E49B5"
+            >
+              <IconExternalLink size={20} />
+            </ActionIcon>
+          </Group>
+        </Stack>
       </Paper>
     );
   }
@@ -98,7 +144,12 @@ export default function Work4() {
               height: 300,
             }}
           >
-            <Text color="#0E49B5" px={1} fw="bold">
+            <Text
+              color="#0E49B5"
+              px={1}
+              fw="bold"
+              className={SpecialElite.className}
+            >
               Featured Project
             </Text>
             <Text
@@ -109,64 +160,13 @@ export default function Work4() {
               color="gray.5"
               fw="bold"
               td="underline"
+              className={Amaranth.className}
             >
               Multify
             </Text>
           </Stack>
 
           <ProjectInfo />
-
-          <Stack
-            align="flex-end"
-            justify="flex-end"
-            sx={{
-              backgroundColor: "#0A1A2F",
-              height: 300,
-            }}
-          >
-            <Group>
-              <Badge color="#0E49B5" variant="outline">
-                JavaScript
-              </Badge>
-              <Badge color="#0E49B5" variant="outline">
-                TypeScript
-              </Badge>
-              <Badge color="#0E49B5" variant="outline">
-                Next JS
-              </Badge>
-              <Badge color="#0E49B5" variant="outline">
-                Uniswap-exchange
-              </Badge>
-              <Badge color="#0E49B5" variant="outline">
-                Covalent-API
-              </Badge>
-              <Badge color="#0E49B5" variant="outline">
-                Chakra-UI
-              </Badge>
-              <Badge color="#0E49B5" variant="outline">
-                Wagmi
-              </Badge>
-            </Group>
-
-            <Group>
-              <ActionIcon
-                component="a"
-                href="https://github.com/SabeloMkhwanzi/Multify-Analytics-Dashboard"
-                target="_blank"
-                color="#0E49B5"
-              >
-                <IconBrandGithub size={20} />
-              </ActionIcon>
-              <ActionIcon
-                component="a"
-                href="https://multify.vercel.app/"
-                target="_blank"
-                color="#0E49B5"
-              >
-                <IconExternalLink size={20} />
-              </ActionIcon>
-            </Group>
-          </Stack>
         </Stack>
         <Imag />
       </SimpleGrid>

@@ -22,6 +22,11 @@ import { useDisclosure, useHover } from "@mantine/hooks";
 import { IconHexagonLetterS } from "@tabler/icons";
 import ResumeDownloader from "../ResumeDownloader";
 
+import localFont from "@next/font/local";
+
+// Font files can be colocated inside of `pages`
+const Amaranth = localFont({ src: "../../fonts/Amaranth-Bold.ttf" });
+
 const useStyles = createStyles((theme) => ({
   link: {
     display: "flex",

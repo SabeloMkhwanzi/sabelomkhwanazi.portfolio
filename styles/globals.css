@@ -6,11 +6,23 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-a {
-  color: "#0A1A2F";
-  text-decoration: none;
+@font-face {
+  font-family: "Amaranth";
+  src: url("../fonts/Amaranth-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
 }
 
-* {
-  box-sizing: border-box;
+@font-face {
+  font-family: "SpecialElite";
+  src: url("../fonts/SpecialElite-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Jaldi";
+  src: url("../fonts/Jaldi-Regular.ttf");
+  font-weight: normal;
+  font-weight: normal;
 }

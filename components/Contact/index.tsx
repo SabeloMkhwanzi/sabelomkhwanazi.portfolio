@@ -1,6 +1,13 @@
 import { createStyles, Title, Text, Button, Container } from "@mantine/core";
 import EmailButton from "../EmailButton";
 
+import localFont from "@next/font/local";
+
+// Font files can be colocated inside of `pages`
+const Amaranth = localFont({ src: "../../fonts/Amaranth-Bold.ttf" });
+const SpecialElite = localFont({ src: "../../fonts/SpecialElite-Regular.ttf" });
+const Jaldi = localFont({ src: "../../fonts/Jaldi-Regular.ttf" });
+
 const useStyles = createStyles((theme) => ({
   wrapper: {
     position: "relative",
@@ -97,15 +104,7 @@ export default function Contact() {
   return (
     <Container className={classes.wrapper} size={1400}>
       <div className={classes.inner}>
-        <Title className={classes.title}>
-          {" "}
-          Thanks for Passing by
-          <Text
-            component="span"
-            className={classes.highlight}
-            inherit
-          ></Text>{" "}
-        </Title>{" "}
+        <Title className={classes.title}> Thanks for Passing by</Title>{" "}
         <Container p={0} size={600}>
           <Text size="lg" color="dimmed" className={classes.description}>
             Lets Build some cool stuff with code!!!

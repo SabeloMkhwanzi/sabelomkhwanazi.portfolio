@@ -7,6 +7,13 @@ import {
   Code,
 } from "@mantine/core";
 
+import localFont from "@next/font/local";
+
+// Font files can be colocated inside of `pages`
+const Amaranth = localFont({ src: "../../fonts/Amaranth-Bold.ttf" });
+const SpecialElite = localFont({ src: "../../fonts/SpecialElite-Regular.ttf" });
+const Jaldi = localFont({ src: "../../fonts/Jaldi-Regular.ttf" });
+
 const BREAKPOINT = "@media (max-width: 755px)";
 
 const useStyles = createStyles((theme) => ({
@@ -90,19 +97,34 @@ export default function HomePage() {
   return (
     <div className={classes.wrapper}>
       <Container size={900} className={classes.inner} bg="bgColor">
-        <Text px={7} color="gray.5" className={classes.text}>
+        <Text fz={25} color="#0E49B5" className={SpecialElite.className}>
           Hi, my name is
         </Text>
         <h1 className={classes.title}>
-          <Text component="span" color="#CCD6F6" inherit>
+          <Text
+            className={Amaranth.className}
+            component="span"
+            color="#CCD6F6"
+            inherit
+          >
             Sabelo Mkhwanazi
           </Text>
-          <br />I build with code...
+
+          <br />
+          <Text
+            className={Amaranth.className}
+            component="span"
+            color="#8892B0"
+            inherit
+          >
+            I build with code...
+          </Text>
         </h1>
 
-        <Text className={classes.description} color="#8892B0">
-          I’m a software developer specializing in building, blockchain
-          Enthusiast hacking and building dapps that promotes decentralization.
+        <Text fz={24} className={Jaldi.className} color="#8892B0">
+          I’m a software developer specializing in building amazing Apps. A
+          blockchain Enthusiast, hacking and building dapps that promotes
+          decentralization.
         </Text>
 
         <Group className={classes.controls}>

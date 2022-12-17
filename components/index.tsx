@@ -13,3 +13,4 @@ export { default as Work4 } from "./Work/Work4";
 export { default as Contact } from "./Contact";
 export { default as ResumeDownloader } from "./ResumeDownloader";
 export { default as EmailButton } from "./EmailButton";
+export { default as DividerComp } from "./EmailButton";

@@ -12,6 +12,16 @@ import {
   Paper,
 } from "@mantine/core";
 import { IconExternalLink, IconBrandGithub } from "@tabler/icons";
+import localFont from "@next/font/local";
+
+// Font files can be colocated inside of `pages`
+const Amaranth = localFont({ src: "../../../fonts/Amaranth-Bold.ttf" });
+
+const SpecialElite = localFont({
+  src: "../../../fonts/SpecialElite-Regular.ttf",
+});
+
+const Jaldi = localFont({ src: "../../../fonts/Jaldi-Regular.ttf" });
 
 const useStyles = createStyles((theme) => ({
   link: {
@@ -30,7 +40,7 @@ const useStyles = createStyles((theme) => ({
   },
 
   card: {
-    height: 400,
+    height: 350,
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
@@ -52,12 +62,54 @@ export default function Work2() {
           backgroundColor: "#112240",
         }}
       >
-        <Text color="gray.5">
+        <Text color="gray.5" className={Jaldi.className}>
           A web3-based Airbnb contender. Decentralized DApp for the home-share,
           hosting and NFT user sharing there experiences. Using web3
-          Decentralized technology to Giving hosts and guests more control,
-          ownership, and value over the Blockchain.
+          Decentralized technology.
         </Text>
+        <Stack align="flex-end" justify="flex-end">
+          <Group
+            sx={(theme) => ({
+              fontSize: theme.fontSizes.md,
+              "@media (max-width: 755px)": {
+                fontSize: theme.fontSizes.sm,
+              },
+            })}
+          >
+            <Badge color="#0E49B5" variant="outline">
+              TypeScript
+            </Badge>
+            <Badge color="#0E49B5" variant="outline">
+              Rect JS
+            </Badge>
+
+            <Badge color="#0E49B5" variant="outline">
+              Solidity
+            </Badge>
+            <Badge color="#0E49B5" variant="outline">
+              Chakr-UI
+            </Badge>
+          </Group>
+
+          <Group>
+            <ActionIcon
+              component="a"
+              href="https://github.com/SabeloMkhwanzi/thirdbnb3"
+              target="_blank"
+              color="#0E49B5"
+            >
+              <IconBrandGithub size={20} />
+            </ActionIcon>
+            <ActionIcon
+              component="a"
+              href="https://thirdbnb.vercel.app/"
+              target="_blank"
+              color="#0E49B5"
+            >
+              <IconExternalLink size={20} />
+            </ActionIcon>
+          </Group>
+        </Stack>
       </Paper>
     );
   }
@@ -99,7 +151,12 @@ export default function Work2() {
               height: 300,
             }}
           >
-            <Text color="#0E49B5" px={1} fw="bold">
+            <Text
+              color="#0E49B5"
+              px={1}
+              fw="bold"
+              className={SpecialElite.className}
+            >
               Featured Project
             </Text>
             <Text
@@ -110,64 +167,13 @@ export default function Work2() {
               color="gray.5"
               fw="bold"
               td="underline"
+              className={Amaranth.className}
             >
               Thirdbnb
             </Text>
           </Stack>
 
           <ProjectInfo />
-
-          <Stack
-            align="flex-end"
-            justify="flex-end"
-            sx={{
-              backgroundColor: "#0A1A2F",
-              height: 300,
-            }}
-          >
-            <Group>
-              <Badge color="#0E49B5" variant="outline">
-                TypeScript
-              </Badge>
-              <Badge color="#0E49B5" variant="outline">
-                Rect JS
-              </Badge>
-              <Badge color="#0E49B5" variant="outline">
-                IPFS-Storage
-              </Badge>
-              <Badge color="#0E49B5" variant="outline">
-                Solidity
-              </Badge>
-              <Badge color="#0E49B5" variant="outline">
-                Polygon
-              </Badge>
-              <Badge color="#0E49B5" variant="outline">
-                Unstoppable-Domains
-              </Badge>
-              <Badge color="#0E49B5" variant="outline">
-                Chakr-UI
-              </Badge>
-            </Group>
-
-            <Group>
-              <ActionIcon
-                component="a"
-                href="https://github.com/SabeloMkhwanzi/thirdbnb3"
-                target="_blank"
-                color="#0E49B5"
-              >
-                <IconBrandGithub size={20} />
-              </ActionIcon>
-              <ActionIcon
-                component="a"
-                href="https://thirdbnb.vercel.app/"
-                target="_blank"
-                color="#0E49B5"
-              >
-                <IconExternalLink size={20} />
-              </ActionIcon>
-            </Group>
-          </Stack>
         </Stack>
         <Imag />
       </SimpleGrid>

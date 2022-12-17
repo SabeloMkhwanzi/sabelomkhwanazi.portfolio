@@ -1,4 +1,3 @@
-import { useState } from "react";
 import {
   Navbar,
   createStyles,
@@ -53,7 +52,7 @@ export default function SideIcon() {
       p="md"
       className={classes.board}
     >
-      <Navbar.Section grow mt={50}>
+      <Navbar.Section grow mt={30}>
         <Stack justify="center" spacing={0}></Stack>
       </Navbar.Section>
 

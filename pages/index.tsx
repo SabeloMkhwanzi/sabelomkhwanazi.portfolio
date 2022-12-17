@@ -14,6 +14,7 @@ import {
   Work,
 } from "../components";
 import { IconHexagonLetterS } from "@tabler/icons";
+import DividerComp from "../components/DivderComp";
 
 const Home: NextPage = () => {
   // const [loading, setLoading] = useState(false);
@@ -43,9 +44,12 @@ const Home: NextPage = () => {
       >
         <ScrollArea style={{ height: 800 }}>
           <HomePage />
+          <DividerComp />
           <About />
+          <DividerComp />
           <Experience />
           <Work />
+          <DividerComp />
           <Contact />
         </ScrollArea>
       </AppShell>
