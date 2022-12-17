@@ -16,7 +16,7 @@
 </h2>
 
 #### A NextJS portfolio site build with Mantine & Chakra-UI
-
+![Home Page](https://github.com/SabeloMkhwanzi/sabelo_portfolio/blob/main/public/Sabelo_portfolio_site.png)
 
 ## Installing
 
