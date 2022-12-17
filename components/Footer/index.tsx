@@ -1,23 +1,29 @@
-import { createStyles, Container, Group, Anchor } from "@mantine/core";
-import { IconHexagonLetterS } from "@tabler/icons";
+import { Text, Group, Center } from "@mantine/core";
+import localFont from "@next/font/local";
 
-const useStyles = createStyles((theme) => ({
-  inner: {
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    paddingTop: theme.spacing.xl,
-    paddingBottom: theme.spacing.xl,
-  },
-}));
+// Font files can be colocated inside of `pages`
+
+const SpecialElite = localFont({ src: "../../fonts/SpecialElite-Regular.ttf" });
 
 export default function Footer() {
-  const { classes } = useStyles();
-
   return (
-    <Container className={classes.inner} bg="#0A1A2F">
-      <IconHexagonLetterS size={28} color="#0E49B5" />
-      <Group>♥ By Sabelo You can Give it ★ </Group>
-    </Container>
+    <>
+      <Center>
+        <Group>
+          <Text size="lg" color="#0D49B0" className={SpecialElite.className}>
+            Made with ❤ by
+          </Text>
+          <Text
+            component="a"
+            href="https://github.com/SabeloMkhwanzi/sabelo_portfolio"
+            target="_blank"
+            color="dimmed"
+            className={SpecialElite.className}
+          >
+            Sabelo M.
+          </Text>
+        </Group>
+      </Center>
+    </>
   );
 }

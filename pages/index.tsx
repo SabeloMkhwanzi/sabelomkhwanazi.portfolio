@@ -7,6 +7,7 @@ import {
   About,
   Contact,
   Experience,
+  Footer,
   HomePage,
   Loading,
   Navbar,
@@ -54,6 +55,7 @@ const Home: NextPage = () => {
             <DividerComp />
             <Contact />
           </Transitions>
+          <Footer />
         </ScrollArea>
       </AppShell>
     </div>

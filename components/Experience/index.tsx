@@ -1,5 +1,4 @@
 import { ActionIcon, Tabs } from "@mantine/core";
-import { IconPhoto, IconMessageCircle, IconSettings } from "@tabler/icons";
 import {
   createStyles,
   Container,
