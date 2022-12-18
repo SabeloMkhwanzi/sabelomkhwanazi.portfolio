@@ -39,7 +39,7 @@ const Home: NextPage = () => {
           },
         }}
       >
-        <ScrollArea style={{ height: 850 }}>
+        <ScrollArea style={{ height: "100%" }}>
           <Transitions>
             <HomePage />
             <DividerComp />
