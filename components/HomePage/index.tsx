@@ -137,8 +137,8 @@ export default function HomePage() {
             </h1>
 
             <Text fz={24} className={Jaldi.className} color="#8892B0">
-              I’m a software developer with passion for building amazing Apps, A
-              web3 Enthusiast - hacking and building dapps that promotes
+              I’m a software developer with passion for building amazing Apps, a
+              Web3 enthusiast - hacking and building dapps that promotes
               decentralization.
             </Text>
 
