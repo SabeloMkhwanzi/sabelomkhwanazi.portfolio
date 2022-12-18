@@ -11,7 +11,7 @@ export default function App(props: AppProps) {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 3000);
+    }, 4000);
   }, []);
 
   return (

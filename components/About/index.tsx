@@ -134,8 +134,8 @@ export default function About() {
                 with code. My interest in web development started with a
                 curiosity to create a blog using Wordpress, but its turns out I
                 wasn’t satisfied with just drag n drop - I wanted know how its
-                workout in the background. Which lead me to discovering,
-                learning programming in it whole.{" "}
+                workout in the background. Which lead me to discover about
+                programming and learning to write my first line of code.{" "}
               </Text>
               <br />
               <Text
