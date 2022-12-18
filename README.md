@@ -8,7 +8,7 @@
 
 
 <p align="center">
-    <a href=""><b>Website</b></a>
+    <a href="https://sabelomkhwanazi-portfolio.vercel.app/"><b>Website</b></a>
 </p> 
 
 <h2 align="center">
@@ -43,7 +43,7 @@ Design inspire by [brittanychiang.com](https://brittanychiang.com/)
 1. clone the repo with the following git command:
 
 ```bash
-git clone https://github.com/SabeloMkhwanzi/sabelo_portfolio
+git clone https://github.com/SabeloMkhwanzi/sabelomkhwanazi.portfolio
 ```
 
 2. open a terminal in the root directory of the project and run:
