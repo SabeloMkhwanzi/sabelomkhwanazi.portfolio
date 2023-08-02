@@ -81,6 +81,12 @@ export default function Work3() {
               JavaScript
             </Badge>
             <Badge color="#0E49B5" variant="outline">
+              Solidity
+            </Badge>
+            <Badge color="#0E49B5" variant="outline">
+              Smart Contract
+            </Badge>
+            <Badge color="#0E49B5" variant="outline">
               Next JS
             </Badge>
             <Badge color="#0E49B5" variant="outline">

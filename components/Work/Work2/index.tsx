@@ -95,6 +95,9 @@ export default function Work2() {
             <Badge color="#0E49B5" variant="outline">
               Solidity
             </Badge>
+              <Badge color="#0E49B5" variant="outline">
+              Smart Contract
+            </Badge>
             <Badge color="#0E49B5" variant="outline">
               Chakr-UI
             </Badge>

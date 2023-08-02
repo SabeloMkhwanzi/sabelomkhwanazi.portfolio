@@ -122,6 +122,19 @@ export default function About() {
                   About
                 </Text>
               </Group>
+              <Text
+                color="dimmed"
+                mt="md"
+                className={Jaldi.className}
+                fw={500}
+                fz="xl"
+              >
+                Hi there! My name is Sabelo, and I am a software & blockchain
+                developer who enjoys building amazing applications with code. My
+                journey into software development began with a simple curiosity
+                to create a blog using WordPress. However, that experience only
+                sparked my desire to dive deeper into the world of programming.{" "}
+              </Text>
 
               <Text
                 color="dimmed"
@@ -130,24 +143,11 @@ export default function About() {
                 fw={500}
                 fz="xl"
               >
-                Hi there! My name is Sabelo and I enjoy building amazing things
-                with code. My interest in web development started with a
-                curiosity to create a blog using Wordpress, but its turns out I
-                wasn’t satisfied with just drag n drop - I wanted know how its
-                workout in the background. Which lead me to discover about
-                programming and learning to write my first line of code.{" "}
-              </Text>
-              <br />
-              <Text
-                color="dimmed"
-                mt="md"
-                className={Jaldi.className}
-                fw={500}
-                fz="xl"
-              >
-                As of now, I’ve grown my development skills, had the privilege
-                of working, Participating at some projects, including web3 open
-                projects and hackathons
+                After attempting to develop a construction estimating tool on
+                Microsoft Excel, I realized there was more than just
+                drag-and-drop solutions. I craved a deeper understanding of how
+                things work behind the scenes. That’s when I took the leap into
+                programming and wrote my first line of code.
               </Text>
               <Text
                 color="dimmed"
@@ -156,8 +156,23 @@ export default function About() {
                 fw={500}
                 fz="xl"
               >
-                My main focus these days is leveling up my skills and being
-                involved with the emerging Web3 ecosystem.
+                Currently, my primary focus is on participating in the vibrant
+                Web3 ecosystem. I am eager to connect with like-minded
+                developers and collaborate on projects that leverage technology
+                to improve our society. Building great software that makes a
+                positive impact is my ultimate goal.
+              </Text>
+              <Text
+                color="dimmed"
+                mt="md"
+                className={Jaldi.className}
+                fw={500}
+                fz="xl"
+              >
+                I’m always open to new opportunities and challenges, so feel
+                free to reach out if you share a passion for technology and a
+                drive to create meaningful solutions. <br /> <br /> 🌍 Ready to
+                work remote and relocation.
               </Text>
               <br />
               <Text
@@ -169,7 +184,6 @@ export default function About() {
               >
                 Here are a few technologies I’ve been working with recently
               </Text>
-
               <List
                 mt={30}
                 size="sm"
