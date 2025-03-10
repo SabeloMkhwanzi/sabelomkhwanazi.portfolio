@@ -58,8 +58,9 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-export default function Work3() {
+export default function Work2() {
   const { classes } = useStyles();
+
   function ProjectInfo() {
     return (
       <Paper
@@ -71,15 +72,26 @@ export default function Work3() {
         className={classes.Paper}
       >
         <Text mb={10} color="gray.5" className={Jaldi.className}>
-          A web3 freelance marketplace service, That connects talents to open
-          projects or opportunities looking to hire. Accelerating the use of
-          decentralized world.
+          A web3-based Airbnb contender. Decentralized DApp for the home-share,
+          hosting and NFT user sharing there experiences. Using web3
+          Decentralized technology.
         </Text>
         <Stack align="flex-end" justify="flex-end">
-          <Group>
+          <Group
+            sx={(theme) => ({
+              fontSize: theme.fontSizes.md,
+              "@media (max-width: 755px)": {
+                fontSize: theme.fontSizes.sm,
+              },
+            })}
+          >
             <Badge color="#0E49B5" variant="outline">
-              JavaScript
+              TypeScript
             </Badge>
+            <Badge color="#0E49B5" variant="outline">
+              Rect JS
+            </Badge>
+
             <Badge color="#0E49B5" variant="outline">
               Solidity
             </Badge>
@@ -87,36 +99,27 @@ export default function Work3() {
               Smart Contract
             </Badge>
             <Badge color="#0E49B5" variant="outline">
-              Next JS
-            </Badge>
-            <Badge color="#0E49B5" variant="outline">
-              Chakra-UI
-            </Badge>
-            <Badge color="#0E49B5" variant="outline">
-              IPFS-NFT.Storage
-            </Badge>
-            <Badge color="#0E49B5" variant="outline">
-              XMPT-Protocol
+              Chakr-UI
             </Badge>
           </Group>
 
           <Group>
             <ActionIcon
               component="a"
-              href="https://github.com/SabeloMkhwanzi/Gigiblock-social-hour-web3"
+              href="https://github.com/SabeloMkhwanzi/thirdbnb3"
               target="_blank"
               color="#0E49B5"
             >
               <IconBrandGithub size={20} />
             </ActionIcon>
-            <ActionIcon
+            {/* <ActionIcon
               component="a"
-              href="https://gigiblock-social-hour-web3.vercel.app/"
+              href="https://thirdbnb.vercel.app/"
               target="_blank"
               color="#0E49B5"
             >
               <IconExternalLink size={20} />
-            </ActionIcon>
+            </ActionIcon> */}
           </Group>
         </Stack>
       </Paper>
@@ -133,7 +136,7 @@ export default function Work3() {
         p="xl"
         radius="lg"
         sx={{
-          backgroundImage: `url(${"/gigiblock.jpg"})`,
+          backgroundImage: `url(${"/thirdbnb.jpg"})`,
           borderColor: "#0E49B5",
           borderWidth: 1,
           transition: "transform 150ms ease, box-shadow 150ms ease",
@@ -151,8 +154,6 @@ export default function Work3() {
   return (
     <Container my={100}>
       <SimpleGrid cols={2} breakpoints={[{ maxWidth: "sm", cols: 1 }]}>
-        <Imag />
-
         <Stack
           sx={{
             backgroundColor: "#0A1A2F",
@@ -178,7 +179,7 @@ export default function Work3() {
             </Text>
             <Text
               component="a"
-              href="https://gigiblock-social-hour-web3.vercel.app/"
+              href="https://thirdbnb.vercel.app/"
               target="_blank"
               tt="uppercase"
               color="gray.5"
@@ -186,12 +187,13 @@ export default function Work3() {
               td="underline"
               className={Amaranth.className}
             >
-              GigiBlock
+              Thirdbnb
             </Text>
           </Stack>
 
           <ProjectInfo />
         </Stack>
+        <Imag />
       </SimpleGrid>
     </Container>
   );

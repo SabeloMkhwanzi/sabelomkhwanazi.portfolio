@@ -137,7 +137,8 @@ export default function HomePage() {
             </h1>
 
             <Text fz={24} className={Jaldi.className} color="#8892B0">
-              I’m a Software & Blockchain Developer, Web3 Enthusiast.
+              I’m a Software Engineer | Web3 Builder | Blockchain & DeFi
+              Innovator
             </Text>
 
             <Group className={classes.controls}>

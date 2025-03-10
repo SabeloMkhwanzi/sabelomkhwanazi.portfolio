@@ -1,9 +1,9 @@
 import React from "react";
 import { Container, Text, Group } from "@mantine/core";
-import Work1 from "./Work1";
-import Work2 from "./Work2";
-import Work3 from "./Work3";
-import Work4 from "./Work4";
+import Work1 from "./Work2";
+import Work2 from "./Work3";
+import Work3 from "./Work4";
+import Work4 from "./Work1";
 
 import localFont from "@next/font/local";
 import Transitions from "../Transitions";
@@ -30,10 +30,10 @@ export default function Work() {
               Portfolio Projects
             </Text>
           </Group>
+          <Work4 />
           <Work1 />
           <Work2 />
           <Work3 />
-          <Work4 />
         </Container>
       </Transitions>
     </>

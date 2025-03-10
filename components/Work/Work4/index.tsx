@@ -58,9 +58,8 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-export default function Work4() {
+export default function Work3() {
   const { classes } = useStyles();
-
   function ProjectInfo() {
     return (
       <Paper
@@ -72,44 +71,52 @@ export default function Work4() {
         className={classes.Paper}
       >
         <Text mb={10} color="gray.5" className={Jaldi.className}>
-          Multify is a multi-chain analytics dashboard, a tool for Investors,
-          Cryptocurrence holders to visualize, analyse data on various
-          blockchains and decentralization exchanges on one platform.
+          A web3 freelance marketplace service, That connects talents to open
+          projects or opportunities looking to hire. Accelerating the use of
+          decentralized world.
         </Text>
         <Stack align="flex-end" justify="flex-end">
           <Group>
             <Badge color="#0E49B5" variant="outline">
-              TypeScript
+              JavaScript
+            </Badge>
+            <Badge color="#0E49B5" variant="outline">
+              Solidity
+            </Badge>
+            <Badge color="#0E49B5" variant="outline">
+              Smart Contract
             </Badge>
             <Badge color="#0E49B5" variant="outline">
               Next JS
             </Badge>
-
-            <Badge color="#0E49B5" variant="outline">
-              Covalent-API
-            </Badge>
             <Badge color="#0E49B5" variant="outline">
               Chakra-UI
+            </Badge>
+            <Badge color="#0E49B5" variant="outline">
+              IPFS-NFT.Storage
+            </Badge>
+            <Badge color="#0E49B5" variant="outline">
+              XMPT-Protocol
             </Badge>
           </Group>
 
           <Group>
             <ActionIcon
               component="a"
-              href="https://github.com/SabeloMkhwanzi/Multify-Analytics-Dashboard"
+              href="https://github.com/SabeloMkhwanzi/Gigiblock-social-hour-web3"
               target="_blank"
               color="#0E49B5"
             >
               <IconBrandGithub size={20} />
             </ActionIcon>
-            <ActionIcon
+            {/* <ActionIcon
               component="a"
-              href="https://multify.vercel.app/"
+              href="https://gigiblock-social-hour-web3.vercel.app/"
               target="_blank"
               color="#0E49B5"
             >
               <IconExternalLink size={20} />
-            </ActionIcon>
+            </ActionIcon> */}
           </Group>
         </Stack>
       </Paper>
@@ -126,7 +133,7 @@ export default function Work4() {
         p="xl"
         radius="lg"
         sx={{
-          backgroundImage: `url(${"/Multify_hp.jpg"})`,
+          backgroundImage: `url(${"/gigiblock.jpg"})`,
           borderColor: "#0E49B5",
           borderWidth: 1,
           transition: "transform 150ms ease, box-shadow 150ms ease",
@@ -144,6 +151,8 @@ export default function Work4() {
   return (
     <Container my={100}>
       <SimpleGrid cols={2} breakpoints={[{ maxWidth: "sm", cols: 1 }]}>
+        <Imag />
+
         <Stack
           sx={{
             backgroundColor: "#0A1A2F",
@@ -169,7 +178,7 @@ export default function Work4() {
             </Text>
             <Text
               component="a"
-              href="https://multify.vercel.app/"
+              href="https://gigiblock-social-hour-web3.vercel.app/"
               target="_blank"
               tt="uppercase"
               color="gray.5"
@@ -177,13 +186,12 @@ export default function Work4() {
               td="underline"
               className={Amaranth.className}
             >
-              Multify
+              GigiBlock
             </Text>
           </Stack>
 
           <ProjectInfo />
         </Stack>
-        <Imag />
       </SimpleGrid>
     </Container>
   );

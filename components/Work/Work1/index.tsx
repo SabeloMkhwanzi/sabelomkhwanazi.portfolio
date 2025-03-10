@@ -58,8 +58,9 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-export default function Work1() {
+export default function Work4() {
   const { classes } = useStyles();
+
   function ProjectInfo() {
     return (
       <Paper
@@ -71,48 +72,33 @@ export default function Work1() {
         className={classes.Paper}
       >
         <Text mb={10} color="gray.5" className={Jaldi.className}>
-          Providing a visual analytics front-end, with rich information about
-          the health and performance of Dex on Evmos ecosystem, Powered by Evmos
-          x Covalent.
+          RWAX is the premier perpetual futures DEX specializing in Real-World
+          Asset (RWA) Indexes. From the Dark Web to Semiconductors, and from
+          Pokemon Cards to Electric Vehicles, unlock access to unique markets
+          that only exist in the real world, now brought onchain for the first
+          time.
         </Text>
-
         <Stack align="flex-end" justify="flex-end">
-          <Group
-            sx={(theme) => ({
-              fontSize: theme.fontSizes.md,
-              "@media (max-width: 755px)": {
-                fontSize: theme.fontSizes.sm,
-              },
-            })}
-          >
+          <Group>
             <Badge color="#0E49B5" variant="outline">
-              JavaScript
+              DEFI
             </Badge>
             <Badge color="#0E49B5" variant="outline">
-              Next JS
+              Real-World Asset (RWA)
+            </Badge>
+
+            <Badge color="#0E49B5" variant="outline">
+              50x Leverage
             </Badge>
             <Badge color="#0E49B5" variant="outline">
-              Rect-Query
-            </Badge>
-            <Badge color="#0E49B5" variant="outline">
-              Covalent-API
-            </Badge>
-            <Badge color="#0E49B5" variant="outline">
-              Evmos-Dex
+              Self Custody
             </Badge>
           </Group>
+
           <Group>
             <ActionIcon
               component="a"
-              href="https://github.com/SabeloMkhwanzi/eddalytics"
-              target="_blank"
-              color="#0E49B5"
-            >
-              <IconBrandGithub size={20} />
-            </ActionIcon>
-            <ActionIcon
-              component="a"
-              href="https://www.eddalytics.xyz/"
+              href="https://therwax.com/"
               target="_blank"
               color="#0E49B5"
             >
@@ -134,7 +120,7 @@ export default function Work1() {
         p="xl"
         radius="lg"
         sx={{
-          backgroundImage: `url(${"/Diffusion_Dex_hp.jpg"})`,
+          backgroundImage: `url(${"/rwax-hp.jpg"})`,
           borderColor: "#0E49B5",
           borderWidth: 1,
           transition: "transform 150ms ease, box-shadow 150ms ease",
@@ -152,8 +138,6 @@ export default function Work1() {
   return (
     <Container my={100}>
       <SimpleGrid cols={2} breakpoints={[{ maxWidth: "sm", cols: 1 }]}>
-        <Imag />
-
         <Stack
           sx={{
             backgroundColor: "#0A1A2F",
@@ -173,14 +157,13 @@ export default function Work1() {
               color="#0E49B5"
               px={1}
               fw="bold"
-              fz={20}
               className={SpecialElite.className}
             >
               Featured Project
             </Text>
             <Text
               component="a"
-              href="https://www.eddalytics.xyz/"
+              href="https://therwax.com/"
               target="_blank"
               tt="uppercase"
               color="gray.5"
@@ -188,12 +171,13 @@ export default function Work1() {
               td="underline"
               className={Amaranth.className}
             >
-              EddAlytics
+              RWAX Exchange
             </Text>
           </Stack>
 
           <ProjectInfo />
         </Stack>
+        <Imag />
       </SimpleGrid>
     </Container>
   );

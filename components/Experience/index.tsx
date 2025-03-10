@@ -122,7 +122,7 @@ export default function Experience() {
                       fw={500}
                       className={Jaldi.className}
                     >
-                      Encode Club
+                      RWAX Exchange
                     </Text>
                   </Tabs.Tab>
                   <Tabs.Tab value="EthGlobal">
@@ -132,7 +132,7 @@ export default function Experience() {
                       fw={500}
                       className={Jaldi.className}
                     >
-                      EthGlobal
+                      Gitcoin, EthGlobal, and Encode
                     </Text>
                   </Tabs.Tab>
                   <Tabs.Tab value="Gitcoin">
@@ -142,7 +142,7 @@ export default function Experience() {
                       fw={500}
                       className={Jaldi.className}
                     >
-                      Gitcoin
+                      Unstoppable Domains
                     </Text>
                   </Tabs.Tab>
                   <Tabs.Tab value="DivineVibrations">
@@ -152,17 +152,7 @@ export default function Experience() {
                       fw={500}
                       className={Jaldi.className}
                     >
-                      D.V Tech Studio
-                    </Text>
-                  </Tabs.Tab>
-                  <Tabs.Tab value="DESE">
-                    <Text
-                      color="dimmed"
-                      fz="lg"
-                      fw={500}
-                      className={Jaldi.className}
-                    >
-                      DESE Projects Solution
+                      Digital Studio
                     </Text>
                   </Tabs.Tab>
                 </Tabs.List>
@@ -174,11 +164,11 @@ export default function Experience() {
                       color="white"
                       className={Jaldi.className}
                     >
-                      Encode Club
+                      RWAX Exchange
                     </Text>
                     <ActionIcon
                       component="a"
-                      href="https://twitter.com/encodeclub"
+                      href="https://twitter.com/The_RWAX"
                       target="_blank"
                       color="#0E49B5"
                     >
@@ -186,7 +176,7 @@ export default function Experience() {
                     </ActionIcon>
                   </Group>
                   <Text fs="xs" fw="normal" color="dimmed">
-                    December 2022 - Present
+                    Nov 2023 - Present
                   </Text>
                   <List
                     mt={30}
@@ -204,9 +194,9 @@ export default function Experience() {
                         color="dimmed"
                         className={Jaldi.className}
                       >
-                        Participating in web3 Hackathons and workshops, and
-                        contribute by building decentralized Dapps using tools
-                        provided by sponsor on various hackathons{" "}
+                        Designed and developed the RWAX Exchange frontend,
+                        ensuring a seamless and user-friendly trading
+                        experience.{" "}
                       </Text>
                     </List.Item>
                     <List.Item>
@@ -216,8 +206,9 @@ export default function Experience() {
                         color="dimmed"
                         className={Jaldi.className}
                       >
-                        With a 4 week timeline and collaboration to complete the
-                        task on projects.{" "}
+                        Built responsive UI components using React.js and
+                        TypeScript, optimizing performance for decentralized
+                        trading.{" "}
                       </Text>
                     </List.Item>
                   </List>
@@ -230,19 +221,39 @@ export default function Experience() {
                       color="white"
                       className={Jaldi.className}
                     >
-                      EthGlobal
+                      Gitcoin, EthGlobal, and Encode
                     </Text>
+                    <ActionIcon
+                      component="a"
+                      href="//https://twitter.com/gitcoin"
+                      target="_blank"
+                      color="#0E49B5"
+                      about="Gitcoin"
+                    >
+                      <IconBrandTwitter color="#0E49B5" size={17} />
+                    </ActionIcon>
                     <ActionIcon
                       component="a"
                       href="https://twitter.com/ethglobal"
                       target="_blank"
                       color="#0E49B5"
+                      about="EthGlobal"
+                    >
+                      <IconBrandTwitter color="#0E49B5" size={17} />
+                    </ActionIcon>
+                    <ActionIcon
+                      component="a"
+                      href="https://twitter.com/encodeclub"
+                      target="_blank"
+                      color="#0E49B5"
+                      about="Encode"
                     >
                       <IconBrandTwitter color="#0E49B5" size={17} />
                     </ActionIcon>
                   </Group>
+
                   <Text fs="lg" fw="normal" color="dimmed">
-                    January 2022 - Present
+                    Oct 2021 - May 2023
                   </Text>
                   <List
                     mt={30}
@@ -287,11 +298,11 @@ export default function Experience() {
                       color="white"
                       className={Jaldi.className}
                     >
-                      Gitcoin
+                      Unstoppable Domains
                     </Text>
                     <ActionIcon
                       component="a"
-                      href="https://twitter.com/gitcoin"
+                      href="https://twitter.com/unstoppableweb"
                       target="_blank"
                       color="#0E49B5"
                     >
@@ -299,7 +310,7 @@ export default function Experience() {
                     </ActionIcon>
                   </Group>
                   <Text fs="lg" fw="normal" color="dimmed">
-                    November 2021 - Present
+                    Jan 2023 - Mar 2023
                   </Text>
                   <List
                     mt={30}
@@ -317,10 +328,9 @@ export default function Experience() {
                         color="dimmed"
                         className={Jaldi.className}
                       >
-                        Select an open issue, work on a project, participating
-                        in hackathons, collaborating, building my skills, and
-                        contribute towards the open source projects in the web3
-                        ecosystem{" "}
+                        Integrated login and resolution functionality into 4 web
+                        applications, enhancing user authentication and
+                        blockchain identity solutions.{" "}
                       </Text>
                     </List.Item>
                     <List.Item>
@@ -330,8 +340,9 @@ export default function Experience() {
                         color="dimmed"
                         className={Jaldi.className}
                       >
-                        With a timeline and collaboration to complete the task
-                        on projects.{" "}
+                        Collaborated with cross-functional teams to address
+                        project-specific requirements and ensure seamless login
+                        feature integration{" "}
                       </Text>
                     </List.Item>
                   </List>
@@ -344,11 +355,11 @@ export default function Experience() {
                     color="white"
                     className={Jaldi.className}
                   >
-                    D.V Tech Studio
+                    Digital Studio
                   </Text>
 
                   <Text fs="lg" fw="normal" color="dimmed">
-                    March 2020 - April 2021
+                    Sep 2020 - Apr 2021
                   </Text>
                   <List
                     mt={30}
@@ -366,8 +377,9 @@ export default function Experience() {
                         color="dimmed"
                         className={Jaldi.className}
                       >
-                        Writing efficient code Creating websites/a website using
-                        standard HTML/CSS practices.{" "}
+                        Worked directly with clients to understand their website
+                        design needs, business goals, and technical
+                        requirements.{" "}
                       </Text>
                     </List.Item>
                     <List.Item>
@@ -377,8 +389,9 @@ export default function Experience() {
                         color="dimmed"
                         className={Jaldi.className}
                       >
-                        Maintaining and expanding/enhancing the website once
-                        built{" "}
+                        Designed, developed, and deployed responsive websites,
+                        ensuring high performance, scalability, and mobile
+                        optimization.{" "}
                       </Text>
                     </List.Item>
                     <List.Item>
@@ -388,81 +401,8 @@ export default function Experience() {
                         color="dimmed"
                         className={Jaldi.className}
                       >
-                        Stay connected with emerging technologies/industry
-                        trends and apply them into operations and activities
-                      </Text>
-                    </List.Item>
-                  </List>
-                </Tabs.Panel>
-
-                <Tabs.Panel value="DESE" pl="xs">
-                  <Group>
-                    <Text
-                      fz="xl"
-                      fw={500}
-                      color="white"
-                      className={Jaldi.className}
-                    >
-                      Construction Estimator
-                    </Text>
-                    <ActionIcon
-                      component="a"
-                      href="https://www.linkedin.com/company/david-swartz-engineering-services/"
-                      target="_blank"
-                      color="#0E49B5"
-                    >
-                      <IconBrandLinkedin color="#0E49B5" />
-                    </ActionIcon>
-                  </Group>
-                  <Text
-                    fs="lg"
-                    fw="normal"
-                    color="dimmed"
-                    className={Jaldi.className}
-                  >
-                    August 2018 - April 2019
-                  </Text>
-                  <List
-                    mt={30}
-                    size="sm"
-                    icon={
-                      <ThemeIcon size={20} bg="#0A1A2F">
-                        <IconChevronRight size={15} color="#0E49B5" />
-                      </ThemeIcon>
-                    }
-                  >
-                    <List.Item>
-                      <Text
-                        fz="xl"
-                        fw={500}
-                        color="dimmed"
-                        className={Jaldi.className}
-                      >
-                        Understand the project and its requirements using
-                        blueprint drawings and other resource information.{" "}
-                      </Text>
-                    </List.Item>
-                    <List.Item>
-                      <Text
-                        fz="xl"
-                        fw={500}
-                        color="dimmed"
-                        className={Jaldi.className}
-                      >
-                        Determine key variables for cost and other estimates,
-                        Gather first-hand information from sites.{" "}
-                      </Text>
-                    </List.Item>
-                    <List.Item>
-                      <Text
-                        fz="xl"
-                        fw={500}
-                        color="dimmed"
-                        className={Jaldi.className}
-                      >
-                        Using software to creating and submit estimates reports
-                        or bids to appropriate persons (project managers,
-                        clients, bidding competitions etc.)
+                        Wrote clean, testable, and efficient code following best
+                        software development practices.
                       </Text>
                     </List.Item>
                   </List>

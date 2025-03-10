@@ -129,11 +129,13 @@ export default function About() {
                 fw={500}
                 fz="xl"
               >
-                Hi there! My name is Sabelo, and I am a software & blockchain
-                developer who enjoys building amazing applications with code. My
-                journey into software development began with a simple curiosity
-                to create a blog using WordPress. However, that experience only
-                sparked my desire to dive deeper into the world of programming.{" "}
+                A Software Engineer, Web3 Builder, and Cofounder passionate
+                about building innovative, high-performance applications. My
+                journey into software development started with a simple
+                curiosity—creating a blog using WordPress. That experience
+                sparked my desire to dive deeper into programming, moving beyond
+                drag-and-drop solutions to truly understanding how technology
+                works behind the scenes.{" "}
               </Text>
 
               <Text
@@ -143,11 +145,13 @@ export default function About() {
                 fw={500}
                 fz="xl"
               >
-                After attempting to develop a construction estimating tool on
-                Microsoft Excel, I realized there was more than just
-                drag-and-drop solutions. I craved a deeper understanding of how
-                things work behind the scenes. That’s when I took the leap into
-                programming and wrote my first line of code.
+                From experimenting with building tools in Excel to writing my
+                first lines of code, I quickly realized my passion for software
+                development, blockchain technology, and decentralized
+                applications (dApps). Today, I specialize in frontend
+                engineering, Web3 integrations, and smart contract interactions,
+                with a strong focus on user experience, performance
+                optimization, and blockchain-powered financial systems.
               </Text>
               <Text
                 color="dimmed"
@@ -169,10 +173,12 @@ export default function About() {
                 fw={500}
                 fz="xl"
               >
-                I’m always open to new opportunities and challenges, so feel
-                free to reach out if you share a passion for technology and a
-                drive to create meaningful solutions. <br /> <br /> 🌍 Ready to
-                work remote and relocation.
+                I work on developing seamless, user-friendly decentralized
+                trading platforms, integrating real-time blockchain data, smart
+                contracts, and DeFi analytics. I’ve also participated in 25+
+                blockchain hackathons, earning awards for 23+ projects,
+                showcasing my ability to rapidly build and iterate on Web3
+                applications.
               </Text>
               <br />
               <Text
@@ -221,7 +227,7 @@ export default function About() {
                       fz="lg"
                       className={Jaldi.className}
                     >
-                      Next JS
+                      React.js & Next.js
                     </Text>
                   </List.Item>
                   <List.Item>
@@ -251,7 +257,17 @@ export default function About() {
                       fz="lg"
                       className={Jaldi.className}
                     >
-                      Chakra-UI & Mantine
+                      Web3.js & Ethers.js
+                    </Text>
+                  </List.Item>
+                  <List.Item>
+                    <Text
+                      color="dimmed"
+                      fw={500}
+                      fz="lg"
+                      className={Jaldi.className}
+                    >
+                      Tailwind CSS, Chakra-UI & Mantine
                     </Text>
                   </List.Item>
                 </SimpleGrid>

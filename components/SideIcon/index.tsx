@@ -81,7 +81,7 @@ export default function SideIcon() {
           <Flex className={classes.link}>
             <ActionIcon
               component="a"
-              href="https://www.linkedin.com/in/sabelo-mkhwanazi-54ba431b1/"
+              href="https://www.linkedin.com/in/sabelomkhwanazi/"
               target="_blank"
             >
               <IconBrandLinkedin color="#0E49B5" size={30} />
