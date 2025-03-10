@@ -8,7 +8,7 @@
 
 
 <p align="center">
-    <a href="https://www.sabelomkhwanazi.xyz"><b>Website</b></a>
+    <a href="https://sabelomkhwanazi-portfolio.vercel.app/"><b>Website</b></a>
 </p> 
 
 <h2 align="center">
